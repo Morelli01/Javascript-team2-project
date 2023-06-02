@@ -65,24 +65,8 @@ img {
     }
 }
 
-@font-face {
-    font-family: Film p3;
-    src: url(../fonts/FilmP3Bold.woff), url(../fonts/FilmP3Bold.ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-
-.mimino {
-    font-family: 'Film P3';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 43px;
-    letter-spacing: 0.3em;
-}
-
 section {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .list {
