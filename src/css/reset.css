@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 414px) {
+    .container {
+        min-width: 414px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        min-width: 1024px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        min-width: 1280px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@font-face {
+    font-family: Film p3;
+    src: url(../fonts/FilmP3Bold.woff), url(../fonts/FilmP3Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mimino {
+    font-family: 'Film P3';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 43px;
+    letter-spacing: 0.3em;
+}
+
+section {
+    font-family: "Montserrat", sans-serif;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    list-style: none;
+}
