@@ -1,0 +1,143 @@
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.header__container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.logowebname-group{
+    display:flex;
+}
+.logo{
+    display: block;
+    z-index: 20;
+}
+.site-name{
+    align-items: center;
+    font-size: 24px;
+}
+.site-name:hover,
+.site-name:focus{
+    color:orange;
+}
+.menu-title{
+    z-index: 30;
+}
+.menu{
+    display:block;
+}
+
+.menu__list{
+    display: flex; 
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu-item:hover,
+.menu-item:focus{
+    color:orange;
+}
+
+.menu-link{
+    font-size: 14px;
+}
+.btn-color{
+    width: 30px;
+    height: 15px;
+
+}
+.button-icon{
+    fill: #FFAC1C;
+    background-color: white;
+}
+.active{
+    color:orange;
+    text-decoration: dashed;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item:not(:last-child) {
+     margin-right: 32px;
+     margin-bottom: 0px;
+    }
+    .menu{
+        display:flex;
+    }
+    .menu__list{
+        display: flex;
+    }
+    .menu-title{
+        display:block;
+    }
+    .site-name{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .menu{
+         display: flex;
+    }
+    .menu__list{
+        display: flex;
+    }
+    .menu-item:not(:last-child) {
+        margin-right: 32px;
+        margin-bottom: 0px;
+       }
+    .menu-title{
+        display:none;
+    }
+    
+}
+
+ @media screen and (max-width: 480px) {
+    .site-name{
+        display:none;
+    }
+    .menu-title{
+        display:block;
+    }
+    .menu{
+        display:block;
+        position:absolute;
+        left:-204px;
+        top:0;
+        width:204px;
+        background-color: blueviolet;
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 105px;
+        padding-bottom: 50px;
+
+        transition: transform .5es;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+        transition-delay: 0;
+    }
+    .menu__list{
+        display:block;
+    }
+    .menu-link{
+        color:black;
+        font-size: 14px;
+    }
+    .header.open .menu {
+        transform:translateX(100%);
+    }
+    .menu-item:not(:last-child){
+        margin-bottom: 24px;
+       }
+}
+
+
+
+
+
