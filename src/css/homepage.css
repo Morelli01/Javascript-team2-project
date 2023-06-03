@@ -5,6 +5,13 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+  --color-primary: #111111;
+  --color-secondary: #F87719;
+  --color-tertiary: #B7B7B7;
+  --font-size-title: 28px;
+  --font-size-subtitle: 20px;
+  --font-size-description: 16px;
+  --font-size-rating: 15px;
 }
 
 /* styles for weekly trends */
@@ -16,19 +23,19 @@
   font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
-  font-size: 28px;
+  font-size: var(--font-size-title);
   line-height: 1.18;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--color-primary);
 }
 
 .link_to_catalog {
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
-  font-size: 28px;
+  font-size: var(--font-size-title);
   line-height: 1.18;
-  color: #F87719;
+  color: var(--color-secondary);
 }
 
 .weekly_trends_wrapper {
@@ -66,7 +73,7 @@
 
 .separator {
   margin: 0 5px;
-  color: #B7B7B7;
+  color: var(--color-tertiary);
   line-height: 23px;
 }
 
@@ -74,7 +81,7 @@
   font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
-  font-size: 20px;
+  font-size: var(--font-size-subtitle);
   line-height: 23px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -85,13 +92,13 @@
   font-family: var(--font-family-secondary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
-  font-size: 20px;
+  font-size: var(--font-size-subtitle);
   line-height: 23px;
-  color: #B7B7B7;
+  color: var(--color-tertiary);
 }
 
 .rating {
-  font-size: 15px;
+  font-size: var(--font-size-rating);
   background: linear-gradient(141.22deg, #F84119 9.4%, rgba(248, 157, 25, 0.8876) 89.96%, rgba(248, 159, 25, 0.68) 91.91%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -102,10 +109,10 @@
   font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
-  font-size: 28px;
+  font-size: var(--font-size-title);
   line-height: 1.18;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--color-primary);
   margin-bottom: 28px;
 }
 
@@ -157,7 +164,7 @@
   font-weight: var(--font-weight-medium);
   font-size: 16px;
   line-height: 1.19;
-  color: #111111;
+  color: var(--color-primary);
 }
 
 .film-month_info-value {
@@ -171,7 +178,7 @@
 }
 
 .film-month_info-year {
-  color: #F87719;
+  color: var(--color-secondary);
 }
 
 .film-month_about-title {
@@ -209,7 +216,7 @@
   line-height: 1.14;
   background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
   border-radius: 74px;
-  color: #111111;
+  color: var(--color-primary);
   font-weight: var(--font-weight-medium);
   border: none;
   cursor: pointer;
