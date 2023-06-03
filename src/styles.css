@@ -1,7 +1,7 @@
-@import url(./reset.css);
-@import url(./header.css);
-@import url(./hero.css);
-@import url(./homepage.css);
-@import url(./film-catalog.css);
-@import url(./modal-window.css);
-@import url(./footer.css);
+@import url(./css/reset.css);
+@import url(./cssheader.css);
+@import url(./csshero.css);
+@import url(./csshomepage.css);
+@import url(./cssfilm-catalog.css);
+@import url(./cssmodal-window.css);
+@import url(./cssfooter.css);
