@@ -41,27 +41,27 @@ img {
     height: auto;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 320px) {
     .container {
-        min-width: 414px;
-        padding-left: 15px;
-        padding-right: 15px;
+        min-width: 320px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .container {
-        min-width: 1024px;
-        padding-left: 15px;
-        padding-right: 15px;
+        min-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .container {
         min-width: 1280px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 32px;
+        padding-right: 32px;
     }
 }
 
