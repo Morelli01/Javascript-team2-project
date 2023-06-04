@@ -6,12 +6,12 @@
 }
 .header__container{
     display:flex;
-    justify-content: space-between;
+     justify-content: space-between;
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
 }
-.logowebname-group{
+.logo-group{
     display:flex;
 }
 .logo{
@@ -26,9 +26,9 @@
 .site-name:focus{
     color:orange;
 }
-.menu-title{
+/* .menu-title{
     z-index: 30;
-}
+} */
 .menu{
     display:block;
 }
@@ -48,82 +48,114 @@
 .menu-link{
     font-size: 14px;
 }
-.btn-color{
+/* .btn-color{
     width: 30px;
     height: 15px;
-
+} */
+.btn-color{
+    padding:0;
+    border:none;
+    background-color: white;
 }
 .button-icon{
     fill: #FFAC1C;
     background-color: white;
+    z-index: 20;
+    width: 30px;
+    height: 15px;
+}
+
+.backdrop{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(56.9%,56.9%,56.9%,20%);
+    
+}
+.backdrop.is-hidden{
+    display:none;
 }
 .active{
     color:orange;
     text-decoration: dashed;
 }
-
-@media screen and (min-width: 768px) {
-    .menu-item:not(:last-child) {
-     margin-right: 32px;
-     margin-bottom: 0px;
+@media screen and (min-width: 768px){
+    site-name{
+        margin-left: 307px;
     }
     .menu{
-        display:flex;
-    }
-    .menu__list{
-        display: flex;
-    }
-    .menu-title{
-        display:block;
-    }
-    .site-name{
-        font-size: 24px;
+        margin-right: 417px;
     }
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) {
+    .header__container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo{
+        margin-right: 8px;
+    }
+    .site-name{
+        margin-right: 30px;
+    }
     .menu{
          display: flex;
+         margin-right: 20px;
     }
     .menu__list{
         display: flex;
     }
     .menu-item:not(:last-child) {
-        margin-right: 32px;
+        margin-right: 15px;
         margin-bottom: 0px;
        }
-    .menu-title{
+     .menu-title{
         display:none;
-    }
+    } 
     
 }
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 479px) {
+    .header__container{
+        justify-content: space-between;
+    }
     .site-name{
         display:none;
     }
     .menu-title{
         display:block;
+    }
+    .hidden{
+        visibility: hidden;
     }
     .menu{
         display:block;
         position:absolute;
+        z-index: 30;
         left:-204px;
         top:0;
         width:204px;
-        background-color: blueviolet;
+        height:438px;
+        background-color: white;
         padding-top: 80px;
         padding-left: 20px;
         padding-right: 105px;
         padding-bottom: 50px;
 
-        transition: transform .5es;
         transition-duration: 500ms;
         transition-timing-function: linear;
         transition-delay: 0;
     }
     .menu__list{
         display:block;
+    }
+    .menu-item:hover,
+    .menu-item:focus{
+        color:orange;
     }
     .menu-link{
         color:black;
