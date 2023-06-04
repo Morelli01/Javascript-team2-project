@@ -1,6 +1,5 @@
 :root {
   --font-family-primary: "Roboto", sans-serif;
-  --font-family-secondary: Roboto, sans-serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -30,7 +29,7 @@
 }
 
 .link_to_catalog {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-title);
@@ -89,11 +88,11 @@
 }
 
 .film_description {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-subtitle);
-  line-height: 23px;
+  line-height: 1.15;
   color: var(--color-tertiary);
 }
 
@@ -141,7 +140,7 @@
 }
 
 .film-month_info-title {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-size: 32px;
   line-height: 1.19;
@@ -161,7 +160,7 @@
 .film-month_info-label {
   display: inline-block;
   min-width: 160px;
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
   font-size: 16px;
   line-height: 1.19;
@@ -169,7 +168,7 @@
 }
 
 .film-month_info-value {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
   font-size: 16px;
@@ -189,7 +188,7 @@
 }
 
 .film-month_about-title {
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-medium);
   font-size: 16px;
@@ -202,7 +201,7 @@
   width: 390px;
   height: 160px;
   overflow-y: auto;
-  font-family: var(--font-family-secondary);
+  font-family: var(--font-family-primary);
   font-style: normal;
   font-weight: var(--font-weight-regular);
   font-size: 14px;
@@ -228,7 +227,7 @@
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background 250ms cubic-bezier(.4,0,.2,1), transform .1s ease-in, box-shadow .25s ease-in;
+  transition: background 250ms cubic-bezier(.4, 0, .2, 1), transform .1s ease-in, box-shadow .25s ease-in;
 }
 
 .film-month_button-add:hover {
@@ -248,20 +247,14 @@
 .weekly_trends_list {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory; /* Добавьте это свойство */
-}
-
-.weekly_trends_list_item {
-  flex: 0 0 280px;
-  overflow: hidden;
-  scroll-snap-align: start; /* Добавьте это свойство */
+  scroll-snap-type: x mandatory;
 }
 
 .weekly_trends_list_item:not(:first-child) {
-  margin-left: 16px; /* Добавьте это свойство для отступа между элементами */
+  margin-left: 16px;
 }
 
-/* Дополнительные стили для плавного скроллинга */
+
 .weekly_trends_list::-webkit-scrollbar {
   display: none;
 }
@@ -270,56 +263,62 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .weekly_trends_list {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   width: 100%;
-  padding: 0 16px;
 }
 
-.weekly_trends_list_item {
-  flex: 0 0 280px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  margin-right: 16px;
-}
 
-.weekly_trends_list_item:last-child {
-  margin-right: 0;
-}
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .weekly_trends_list_item {
+    flex: 0 0 280px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    margin-right: 16px;
+  }
+
+  .weekly_trends_list_item:last-child {
+    margin-right: 0;
+  }
+
+  .weekly_trends_list_item {
     width: 224px;
   }
-  .film-month {
-    /*padding: 0;*/
-  }
+
   .film-month_image {
     width: 100%;
   }
+
   .film-month_content {
     padding-left: 0; /* ToDo remove padding left 16 */
   }
+
   .film-month_wrapper {
     flex-direction: column;
   }
+
   .film-month_info-splitter {
     float: left;
     width: 50%;
     box-sizing: border-box;
   }
+
   .film-month_about-description {
     width: 100%;
     height: 100px;
     margin-bottom: 20px;
   }
+
   .film-month_info {
     display: flex;
     flex-wrap: wrap;
   }
+
   .film-month_info > * {
     flex-basis: 50%;
   }
@@ -338,14 +337,16 @@
   .film-month_button {
     margin-top: 20px;
   }
+
   .film-month_info-title {
     margin-top: 32px;
   }
+
   .film-month_about-description {
     width: 625px;
     height: 100px;
     overflow-y: auto;
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-primary);
     font-style: normal;
     font-weight: var(--font-weight-regular);
     font-size: 14px;
@@ -356,8 +357,9 @@
 @media screen and (min-width: 360px) and (max-width: 767px) {
 
   .section {
-    background-color: #111111;
+    background-color: var(--color-primary);
   }
+
   .weekly_trends_list_item {
     width: 100%;
     overflow: hidden;
@@ -370,14 +372,14 @@
   }
 
   .weekly_trends_list_item:not(:first-child) {
-    margin-left: 0; /* Удалите отступ между элементами */
+    margin-left: 0;
   }
 
   .weekly_trends_list {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Добавьте это свойство для плавного скроллинга на iOS */
+    -webkit-overflow-scrolling: touch;
   }
 
   .weekly_trends_list::-webkit-scrollbar {
@@ -388,31 +390,39 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
   .weekly_trends_title {
     font-size: var(--font-size-description);
     line-height: 1.19;
     color: #FFFFFF;
   }
+
   .link_to_catalog {
     font-size: var(--font-size-description);
   }
+
   .weekly_trends {
     padding: 40px 20px 32px;
   }
+
   .weekly_trends_wrapper {
     padding-bottom: 24px;
   }
+
   .film-2, .film-3 {
     display: none;
   }
+
   .weekly_trends_list {
     display: inline-block;
     padding: 0;
   }
+
   .film_title, .film_description {
     font-size: 12px;
     line-height: 1.7;
   }
+
   .weekly-trends_description {
     padding: 12px;
   }
@@ -433,20 +443,26 @@
   .film-month_wrapper {
     flex-direction: column;
   }
+
   .film-month_image {
     width: 100%;
+    height: 402px;
   }
+
   .film-month_about-description {
     width: auto;
     height: auto;
     color: #F8F8F8;
   }
+
   .film-month_img {
     margin-bottom: 24px;
   }
+
   .film-month_content {
-     padding-left: 0;
+    padding-left: 0;
   }
+
   .film-month_info-title {
     font-size: 20px;
     line-height: 1.15;
@@ -455,7 +471,7 @@
   }
 
   .film-month_info-label {
-    color: #B7B7B7;
+    color: var(--color-tertiary);
   }
 
   .value-number {
@@ -464,7 +480,7 @@
 
   .film-month_info-value .value-separator {
     color: #F8F8F8;
-    background-color: #111111;
+    background-color: var(--color-primary);
   }
 
   .span-value {
@@ -472,7 +488,7 @@
   }
 
   .film-month_about-title {
-    color: #B7B7B7;
+    color: var(--color-tertiary);
   }
 
   .film-month_button {
@@ -483,19 +499,6 @@
     min-width: 140px;
   }
 
-
-
 }
-/*@media screen and (min-width: 1200px) {*/
-/*  .weekly_trends_list_item {*/
-/*    width: 395px;*/
-/*  }*/
 
-/*  .film-month_image {*/
-/*    width: 805px;*/
-/*  }*/
 
-/*  .film-month_wrapper {*/
-/*    flex-direction: row;*/
-/*  }*/
-/*}*/
