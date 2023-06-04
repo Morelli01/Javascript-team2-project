@@ -120,6 +120,7 @@
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 100px;
+
 }
 
 .film-month_info {
@@ -177,6 +178,12 @@
   align-items: center;
 }
 
+.value-number {
+  background: #F8F8F8;
+  border-radius: 5px;
+  padding: 1px 8px;
+}
+
 .film-month_info-year {
   color: var(--color-secondary);
 }
@@ -199,7 +206,7 @@
   font-style: normal;
   font-weight: var(--font-weight-regular);
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.43;
 }
 
 .film-month_button {
@@ -218,6 +225,7 @@
   border-radius: 74px;
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
+  outline: none;
   border: none;
   cursor: pointer;
   transition: background 250ms cubic-bezier(.4,0,.2,1), transform .1s ease-in, box-shadow .25s ease-in;
@@ -237,6 +245,50 @@
 .film-month_button {
 }
 
+.weekly_trends_list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Добавьте это свойство */
+}
+
+.weekly_trends_list_item {
+  flex: 0 0 280px;
+  overflow: hidden;
+  scroll-snap-align: start; /* Добавьте это свойство */
+}
+
+.weekly_trends_list_item:not(:first-child) {
+  margin-left: 16px; /* Добавьте это свойство для отступа между элементами */
+}
+
+/* Дополнительные стили для плавного скроллинга */
+.weekly_trends_list::-webkit-scrollbar {
+  display: none;
+}
+
+.weekly_trends_list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.weekly_trends_list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.weekly_trends_list_item {
+  flex: 0 0 280px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  margin-right: 16px;
+}
+
+.weekly_trends_list_item:last-child {
+  margin-right: 0;
+}
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .weekly_trends_list_item {
@@ -284,7 +336,7 @@
 
 
   .film-month_button {
-    margin-top: 36px;
+    margin-top: 20px;
   }
   .film-month_info-title {
     margin-top: 32px;
@@ -299,6 +351,140 @@
     font-size: 14px;
     line-height: 1.42;
   }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+
+  .section {
+    background-color: #111111;
+  }
+  .weekly_trends_list_item {
+    width: 100%;
+    overflow: hidden;
+    margin-right: 0;
+  }
+
+  .weekly_trends_list_item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .weekly_trends_list_item:not(:first-child) {
+    margin-left: 0; /* Удалите отступ между элементами */
+  }
+
+  .weekly_trends_list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Добавьте это свойство для плавного скроллинга на iOS */
+  }
+
+  .weekly_trends_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .weekly_trends_list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .weekly_trends_title {
+    font-size: var(--font-size-description);
+    line-height: 1.19;
+    color: #FFFFFF;
+  }
+  .link_to_catalog {
+    font-size: var(--font-size-description);
+  }
+  .weekly_trends {
+    padding: 40px 20px 32px;
+  }
+  .weekly_trends_wrapper {
+    padding-bottom: 24px;
+  }
+  .film-2, .film-3 {
+    display: none;
+  }
+  .weekly_trends_list {
+    display: inline-block;
+    padding: 0;
+  }
+  .film_title, .film_description {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .weekly-trends_description {
+    padding: 12px;
+  }
+
+  .film-month {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+
+  .film-month_title {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+  }
+
+  .film-month_wrapper {
+    flex-direction: column;
+  }
+  .film-month_image {
+    width: 100%;
+  }
+  .film-month_about-description {
+    width: auto;
+    height: auto;
+    color: #F8F8F8;
+  }
+  .film-month_img {
+    margin-bottom: 24px;
+  }
+  .film-month_content {
+     padding-left: 0;
+  }
+  .film-month_info-title {
+    font-size: 20px;
+    line-height: 1.15;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  .film-month_info-label {
+    color: #B7B7B7;
+  }
+
+  .value-number {
+    background: #FFFFFF;
+  }
+
+  .film-month_info-value .value-separator {
+    color: #F8F8F8;
+    background-color: #111111;
+  }
+
+  .span-value {
+    color: #FFFFFF;
+  }
+
+  .film-month_about-title {
+    color: #B7B7B7;
+  }
+
+  .film-month_button {
+    margin-top: 20px;
+  }
+
+  .film-month_button-add {
+    min-width: 140px;
+  }
+
+
+
 }
 /*@media screen and (min-width: 1200px) {*/
 /*  .weekly_trends_list_item {*/
