@@ -5,6 +5,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-family-primary: "Roboto", sans-serif;
+    --font-family-secondary: Roboto, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --color-primary: #111111;
+    --color-secondary: #F87719;
+    --color-tertiary: #B7B7B7;
+    --font-size-title: 28px;
+    --font-size-subtitle: 20px;
+    --font-size-description: 16px;
+    --font-size-rating: 15px;
+}
+
 h1,
 h2,
 h3,
