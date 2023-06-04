@@ -19,6 +19,9 @@
     --font-size-subtitle: 20px;
     --font-size-description: 16px;
     --font-size-rating: 15px;
+    --text-primary-color: #F8F8F8;
+    --text-secondary-color: #FFFFFF;
+    --btn-linear-color: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
 }
 
 h1,
