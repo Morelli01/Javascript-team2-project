@@ -1,0 +1,142 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  #modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal {
+      padding: 20px;
+      width: 500px;
+      height: 100%;
+      background-color: #111111;
+      border-radius: 5px;
+      box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+      z-index: 10000;
+      overflow-y: auto;
+  }
+  
+  .modal-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 16px;
+      height: 100%;
+  }
+  
+  .modal-close-btn {
+    display: block;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: #111111;
+  }
+  
+  .modal-close-icon {
+    fill: #ffffff;
+  }
+  
+  .modal-poster {
+    margin-bottom: 22px;
+    margin-top: 52px;
+  }
+  
+  .modal-title-movie {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details table {
+    margin-bottom: 10px;
+  }
+  
+  .movie-details td {
+    color: #b7b7b7;
+    padding: 5px 10px;
+  }
+  
+  .about {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #b7b7b7;
+  }
+  
+  .about-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #f8f8f8;
+  
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .modal-form-submit {
+    padding: 10px 20px;
+    background-color: #111111;
+    border-color: #ffc226;
+  
+    border-radius: 74px;
+    cursor: pointer;
+    width: 140px;
+    height: 38px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 52px;
+  }
+  
+  .modal-form-submit:hover {
+    background-color: #ffffff;
+    color: #f87719;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal {
+      width: 80%;
+      max-width: 704px;
+    }
+    .modal-content {
+      flex-direction: row;
+      gap: 16px;
+    }
+    .img-wrap {
+      width: 294px;
+      height: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .modal {
+      width: 90%;
+      max-width: 1200px;
+    }
+  }
+  
