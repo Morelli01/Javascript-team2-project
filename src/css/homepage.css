@@ -29,12 +29,27 @@
 }
 
 .link_to_catalog {
-  font-family: var(--font-family-primary);
-  font-style: normal;
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-title);
-  line-height: 1.18;
+  position: relative;
+  overflow: hidden;
   color: var(--color-secondary);
+}
+
+.link_to_catalog::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.link_to_catalog:hover::before,
+.link_to_catalog:focus::before {
+  transform: scaleX(1);
 }
 
 .weekly_trends_wrapper {
@@ -42,6 +57,7 @@
   justify-content: space-between;
   padding-bottom: 28px;
 }
+
 
 .weekly_trends_list {
   display: flex;
@@ -51,10 +67,20 @@
 
 .weekly_trends_list_item {
   position: relative;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 63.48%, rgba(0, 0, 0, 0.9) 92.16%);
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0) 63.48%, rgba(0, 0, 0, 0.9) 92.16%);
   width: 395px;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weekly_trends_list_item:hover,
+.weekly_trends_list_item:focus {
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 10px,
+  rgba(0, 0, 0, 0.3) 0 10px 7px -2px;
+  transform: scale(1.03) translateZ(10px);
+  border-radius: 5px;
 }
 
 .weekly-trends_description {
@@ -62,7 +88,7 @@
   display: flex;
   align-content: stretch;
   align-items: flex-end;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: space-between;
   width: 100%;
   padding: 20px;
@@ -85,6 +111,7 @@
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 10px;
+  /*white-space: nowrap;*/
 }
 
 .film_description {
@@ -250,11 +277,6 @@
   scroll-snap-type: x mandatory;
 }
 
-.weekly_trends_list_item:not(:first-child) {
-  margin-left: 16px;
-}
-
-
 .weekly_trends_list::-webkit-scrollbar {
   display: none;
 }
@@ -276,7 +298,7 @@
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .weekly_trends_list_item {
-    flex: 0 0 280px;
+    /*flex: 0 0 280px;*/
     overflow: hidden;
     scroll-snap-align: start;
     margin-right: 16px;
@@ -409,9 +431,6 @@
     padding-bottom: 24px;
   }
 
-  .film-2, .film-3 {
-    display: none;
-  }
 
   .weekly_trends_list {
     display: inline-block;
@@ -445,8 +464,11 @@
   }
 
   .film-month_image {
+    flex-direction: column;
     width: 100%;
-    height: 402px;
+    /*height: 402px;*/
+    margin-bottom: 24px;
+
   }
 
   .film-month_about-description {
@@ -456,7 +478,9 @@
   }
 
   .film-month_img {
-    margin-bottom: 24px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
   }
 
   .film-month_content {

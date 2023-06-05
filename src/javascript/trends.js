@@ -32,7 +32,7 @@ const createItemMarkup = async (film, genres) => {
     .map(({ name }) => name)
     .join(', ');
 
-  return `<li class='weekly_trends_list_item film-1'>
+  return `<li class='weekly_trends_list_item' data-film-id='${film.id}'>
         <img src='${imageSrc}'>
         <div class='weekly-trends_description'>
           <div>
@@ -43,3 +43,11 @@ const createItemMarkup = async (film, genres) => {
         </div>
       </li>`;
 };
+
+
+const seeAllLink = document.querySelector('.link_to_catalog');
+if (seeAllLink) {
+  seeAllLink.addEventListener('click', () => {
+    window.location.href = 'https://www.themoviedb.org/movie/603692-john-wick-chapter-4';
+  });
+}
