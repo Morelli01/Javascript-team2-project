@@ -14,7 +14,7 @@ import { getGenres, getRandomFilmOfMonth } from './api';
 })();
 
 const createMarkup = (film, genres) => {
-  const baseUrl = 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
+  const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
   const overview = film.overview;
 
@@ -51,6 +51,7 @@ const createMarkup = (film, genres) => {
           <span class='film-month_info-label'>Vote/Votes</span>
           <span class='film-month_info-value'>
             <span class='value-number'>${voteAverage}</span>
+             <span class='value-separator'>/</span>
             <span class='value-number'>${voteCount}</span>
           </span>
         </div>
