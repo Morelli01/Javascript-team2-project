@@ -6,7 +6,7 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
-    
+
     background: #92729574;
     z-index: 1001;
 
@@ -42,8 +42,9 @@
     border-top: .25rem solid #f5f5f5;
     border-right: .25rem solid transparent;
     animation: rotation 1s linear infinite;
+}
 
-    &:after {
+.loader:after {
         content: '';
         position: absolute;
         left: 0;
@@ -55,7 +56,8 @@
         border-bottom: .25rem solid transparent;
         animation: rotation 0.5s linear infinite reverse;
     }
-}
+
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg)
