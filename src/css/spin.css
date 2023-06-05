@@ -45,17 +45,17 @@
 }
 
 .loader:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 3.375rem;
-        height: 3.375rem;
-        border-radius: 50%;
-        border-left: .25rem solid #F87719;
-        border-bottom: .25rem solid transparent;
-        animation: rotation 0.5s linear infinite reverse;
-    }
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3.375rem;
+    height: 3.375rem;
+    border-radius: 50%;
+    border-left: .25rem solid #F87719;
+    border-bottom: .25rem solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
 
 
 @keyframes rotation {
