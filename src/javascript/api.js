@@ -1,4 +1,5 @@
 'use strict';
+import axios from 'axios';
 
 const apiKey = '97fe01addf81f73693338979426ece1e';
 const baseUrl = 'https://api.themoviedb.org/3';
@@ -61,9 +62,21 @@ const getGenres = async () => {
 const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
+const getCategoriesQuery = async (query, page) => {
+  const endpoint = 'search/movie';
+  const { data } = await axios.get(
+    `${baseUrl}/${endpoint}?api_key=${apiKey}&query=${query}&page=${page}&language=en-US`
+  );
+  // console.log(data);
+  try {
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
 export {
   getFilms,
   getRandomFilmOfMonth,
-  getGenres
+  getGenres,
+  getCategoriesQuery
 }
