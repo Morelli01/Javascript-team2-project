@@ -1,0 +1,190 @@
+.hero {
+
+    padding-left: 20px;
+    height: 380px;
+    background: linear-gradient(86.77deg, #111111 1.38%, rgba(17, 17, 17, 0) 10.61%), url(../images/BG/mobile-bg-home-x1-min.jpg);
+    background-position: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-primary)
+}
+
+
+.hero-title {
+    padding-top: 40px;
+    max-width: 200px;
+    font-style: normal;
+    font-size: 32px;
+    line-height: calc(38/32);
+    color: var(--text-secondary-color)
+}
+
+
+
+.hero-text {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14);
+    max-width: 180px;
+    color: var(--text-primary-color)
+}
+
+
+.hero-wrapper-btn {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.hero-getstarted-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    padding: 12px 24px;
+
+    color: #111111;
+    background: var(--btn-linear-color);
+    border-radius: 74px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-moredetails-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    padding: 12px 24px;
+
+
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 74px;
+    cursor: pointer;
+
+}
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        padding-left: 20px;
+        height: 380px;
+        background: linear-gradient(86.77deg, #111111 1.38%, rgba(17, 17, 17, 0) 10.61%), url(../images/BG/mobile-bg-home-x2-min.jpg);
+        background-position: 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-left: 32px;
+        height: 432px;
+        background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/tablet-bg-home-x1-min.jpg);
+        background-position: 170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            padding-left: 32px;
+            height: 432px;
+            background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/tablet-bg-home-x2-min.jpg);
+            background-position: 170px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--color-primary)
+        }
+
+    }
+
+    .hero-title {
+        max-width: 350px;
+        padding-top: 122px;
+        font-size: 44px;
+        line-height: calc(52/44);
+    }
+
+    .hero-text {
+        max-width: 350px;
+    }
+
+
+    .hero-wrapper-btn {
+        margin-top: 32px;
+    }
+
+    .hero-getstarted-btn {
+        font-size: 14px;
+        line-height: calc(20/14);
+    }
+
+    .hero-moredetails-btn {
+        font-size: 14px;
+        line-height: calc(20/14);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero {
+
+        height: 720;
+        background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x1-min.jpg);
+        background-position: 170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            height: 720;
+            background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x2-min.jpg);
+            background-position: 170px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--color-primary)
+        }
+
+    }
+
+    .hero-title {
+        max-width: 470px;
+        padding-top: 230px;
+        font-size: 64px;
+        line-height: calc(75/64);
+    }
+
+    .hero-text {
+        max-width: 470px;
+        font-size: 16px;
+        line-height: calc(19/16)
+    }
+
+    .hero-getstarted-btn {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+
+    .hero-moredetails-btn {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+}

@@ -1,4 +1,6 @@
 import("./javascript/api");
+import("./javascript/trends");
+import("./javascript/film-month");
 import("./javascript/dark-light");
 import("./javascript/film-catalog");
 import("./javascript/header-menu");
@@ -10,4 +12,6 @@ import("./javascript/pagination");
 import("./javascript/scroll");
 import("./javascript/stars");
 import("./javascript/trailer")
+import("./javascript/spin");
+import("./javascript/scroll");
 import("./javascript/footer");
