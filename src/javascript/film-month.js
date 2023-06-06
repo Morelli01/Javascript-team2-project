@@ -1,21 +1,21 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
 // import { spinnerStart, spinnerStop } from './spin';
 
-(async () => {
-  spinnerStart()
-  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
-  const film = await getRandomFilmOfMonth();
-  console.log('filmMonth', film);
+// (async () => {
+//   spinnerStart()
+//   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+//   const film = await getRandomFilmOfMonth();
+//   console.log('filmMonth', film);
 
-  const genres = await getGenres();
-  spinnerStop()
+//   const genres = await getGenres();
+//   spinnerStop()
 
-  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
-  if (filmMonthWrapper) {
-    const resultMarkup = createMarkup(film, genres);
-    filmMonthWrapper.innerHTML = resultMarkup;
-  }
-})();
+//   const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+//   if (filmMonthWrapper) {
+//     const resultMarkup = createMarkup(film, genres);
+//     filmMonthWrapper.innerHTML = resultMarkup;
+//   }
+// })();
 
 const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
