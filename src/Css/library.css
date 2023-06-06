@@ -72,7 +72,6 @@ body {
   max-width: 235px;
   text-align: left;
   margin-bottom: 8px;
-  padding-left: 20px;
 }
 .hero-description-library {
   font-family: 'Roboto';
@@ -85,7 +84,6 @@ body {
   color: #f8f8f8;
   max-width: 249px;
   text-align: left;
-  padding-left: 20px;
 }
 .error-section {
   background-color: #111111;
@@ -280,7 +278,6 @@ body {
     align-items: center;
     color: #ffffff;
     max-width: 332px;
-    padding-left: 32px;
   }
   .hero-description-library {
     font-family: 'Roboto';
@@ -292,7 +289,6 @@ body {
     align-items: center;
     color: #f8f8f8;
     max-width: 357px;
-    padding-left: 32px;
   }
   .error-section {
     padding-top: 80px;
@@ -374,7 +370,6 @@ body {
     color: #ffffff;
     max-width: 464px;
     margin-bottom: 16px;
-    padding-left: 117px;
   }
   .hero-description {
     font-family: 'Roboto';
@@ -386,7 +381,6 @@ body {
     align-items: center;
     max-width: 464px;
     color: #f8f8f8;
-    padding-left: 117px;
   }
   .error-section {
     padding-top: 160px;
