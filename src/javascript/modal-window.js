@@ -1,7 +1,4 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
-  const openModalButton = document.getElementById('openModalButton');
   const modal = document.getElementById('modal');
   const movieTitle = document.querySelector('.modal-title-movie');
   const movieDetails = document.querySelector('.movie-details table tbody');
@@ -9,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const moviePoster = document.querySelector('.modal-poster');
 
   const openModal = (movieId) => {
-    const url = 'https://api.themoviedb.org/3/movie/' + movieId + '?api_key=7bd54d4ecca90d61812ee42cdc93d740';
-
+    const apiKey = '97fe01addf81f73693338979426ece1e';
+    const baseUrl = 'https://api.themoviedb.org/3';
+    const url = `${baseUrl}/movie/${movieId}?api_key=${apiKey}`;
+  
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -51,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.style.display = 'none';
   };
 
+  const openModalButton = document.getElementById('openModalButton');
   openModalButton.addEventListener('click', openModal);
 
   const closeButton = modal.querySelector('.modal-close-btn');
@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Обработчик события клика на изображения списка
   const movieImages = document.querySelectorAll('.movie-image');
   movieImages.forEach(image => {
-    image.addEventListener('click', openModal);
+    image.addEventListener('click', () => {
+      const movieId = image.dataset.movieId;
+      openModal(movieId);
+    });
   });
 });
