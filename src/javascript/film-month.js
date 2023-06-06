@@ -1,5 +1,5 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
-// import { spinnerStart, spinnerStop } from './spin';
+import { spinnerStart, spinnerStop } from './spin';
 
 (async () => {
   spinnerStart()
