@@ -46,7 +46,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-.hero-library {
+.hero {
   background: linear-gradient(
       79.49deg,
       #111111 34.1%,
@@ -60,7 +60,7 @@ body {
   padding-bottom: 144px;
 }
 
-.hero-text-library {
+.hero-text {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -72,8 +72,9 @@ body {
   max-width: 235px;
   text-align: left;
   margin-bottom: 8px;
+  padding-left: 20px;
 }
-.hero-description-library {
+.hero-description {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -84,6 +85,7 @@ body {
   color: #f8f8f8;
   max-width: 249px;
   text-align: left;
+  padding-left: 20px;
 }
 .error-section {
   background-color: #111111;
@@ -256,7 +258,7 @@ body {
   .search_film {
     padding-top: 60px;
   }
-  .hero-library {
+  .hero {
     background: linear-gradient(
         77.77deg,
         #111111 33.58%,
@@ -268,7 +270,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .hero-text-library {
+  .hero-text {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -278,8 +280,9 @@ body {
     align-items: center;
     color: #ffffff;
     max-width: 332px;
+    padding-left: 32px;
   }
-  .hero-description-library {
+  .hero-description {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -289,6 +292,7 @@ body {
     align-items: center;
     color: #f8f8f8;
     max-width: 357px;
+    padding-left: 32px;
   }
   .error-section {
     padding-top: 80px;
@@ -347,7 +351,7 @@ body {
   .search_film_wrap {
     left: 20px;
   }
-  .hero-library {
+  .hero {
     background: linear-gradient(
         80.53deg,
         #111111 31.92%,
@@ -359,7 +363,7 @@ body {
     padding-top: 229px;
     padding-bottom: 341px;
   }
-  .hero-text-library {
+  .hero-text {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -370,6 +374,7 @@ body {
     color: #ffffff;
     max-width: 464px;
     margin-bottom: 16px;
+    padding-left: 117px;
   }
   .hero-description {
     font-family: 'Roboto';
@@ -381,6 +386,7 @@ body {
     align-items: center;
     max-width: 464px;
     color: #f8f8f8;
+    padding-left: 117px;
   }
   .error-section {
     padding-top: 160px;
@@ -417,4 +423,23 @@ body {
   .library-section {
     padding-top: 110px;
   }
+}
+.btn-library {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-library:hover {
+  background-color: #ddd;
+}
+
+.pickgenre {
+  color: #b7b7b7;
 }
