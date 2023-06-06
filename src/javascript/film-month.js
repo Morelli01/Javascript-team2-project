@@ -2,13 +2,13 @@ import { getGenres, getRandomFilmOfMonth } from './api';
 import { spinnerStart, spinnerStop } from './spin';
 
 (async () => {
-  spinnerStart()
+  // spinnerStart()
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
   const film = await getRandomFilmOfMonth();
   console.log('filmMonth', film);
 
   const genres = await getGenres();
-  spinnerStop()
+  // spinnerStop()
 
   const filmMonthWrapper = document.querySelector('.film-month_wrapper');
   if (filmMonthWrapper) {
