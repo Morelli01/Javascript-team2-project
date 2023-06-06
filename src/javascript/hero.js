@@ -1,33 +1,24 @@
 import axios from 'axios';
 
-// DOM ELEMENTS================================================
+// DOM ELEMENTS
 const heroSection = document.querySelector('.hero');
 const heroTitle = document.querySelector('.hero-title');
 const heroText = document.querySelector('.hero-text');
 const heroTrailerBTN = document.querySelector('.hero-getstarted-btn');
 const heroMoreBTN = document.querySelector('.hero-moredetails-btn');
-const heroRaiting = document.querySelector('.reiting');
+const heroRaiting = document.querySelector('.rating');
 const trailerModal = document.querySelector('.trailer-modal');
 const closeModal = document.querySelector('.trailer-svg-close');
 const trailerVideo = document.querySelector('.trailer-video');
 
-// =============================================================
 let screenWidth = document.documentElement.clientWidth;
 
-// SLICE HERO TEXT =======================================
+// SLICE HERO TEXT
 if (screenWidth < 768) {
   heroText.textContent = heroText.textContent.slice(0, 120);
 }
-if (screenWidth >= 768) {
-  heroText.textContent = heroText.textContent.slice(0);
-}
 
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-// EVENT FUNCTION=====================================
-
+// EVENT HANDLERS
 function onOpenModalTrailer(e) {
   e.preventDefault();
   trailerModal.classList.remove('ishidden');
@@ -41,68 +32,68 @@ function onCloseModalTrailer(e) {
   document.body.classList.remove('noScroll');
 }
 
-//TRAILER_VIDEO ===========================================================
-async function trailer(id) {
-  const options = {
-    method: 'GET',
-    url: `https://api.themoviedb.org/3/movie/${id}/videos`,
-    params: { language: 'en-US' },
-    headers: {
-      accept: 'application/json',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
-    },
-  };
-  const response = await axios.request(options);
-  return response.data.results;
+// TRAILER VIDEO
+async function fetchTrailer(id) {
+  try {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos`, {
+      params: { language: 'en-US' },
+      headers: {
+        accept: 'application/json',
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
+      },
+    });
+    return response.data.results;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
-async function trendingFilms_DAY() {
-  const options = {
-    method: 'GET',
-    url: 'https://api.themoviedb.org/3/trending/all/day',
-    params: { language: 'en-US' },
-    headers: {
-      accept: 'application/json',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
-    },
-  };
-
-  const response = await axios.request(options);
-  console.log(response.data);
-  return response.data;
+async function fetchTrendingFilmsOfDay() {
+  try {
+    const response = await axios.get('https://api.themoviedb.org/3/trending/all/day', {
+      params: { language: 'en-US' },
+      headers: {
+        accept: 'application/json',
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
-trendingFilms_DAY()
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Load the trending films and set up the hero section
+fetchTrendingFilmsOfDay()
   .then(data => {
-    const {
-      title = '',
-      name = '',
-      overview = '',
-      backdrop_path = '',
-      id,
-    } = data.results[getRandomNumber(0, 20)];
+    const { title, name, overview, backdrop_path, id } = data.results[getRandomNumber(0, 20)];
 
-    trailer(id)
+    fetchTrailer(id)
       .then(data => {
-        onYouTubeIframeAPIReady(data[getRandomNumber(0, data.length)].key);
+        const trailerKey = data[getRandomNumber(0, data.length)].key;
+        onYouTubeIframeAPIReady(trailerKey);
         closeModal.classList.add('inother-position');
         console.log(data);
-        console.log(`https://www.youtube.com/embed/${data[0].key}`);
+        console.log(`https://www.youtube.com/embed/${trailerKey}`);
       })
-      .catch(e => {
+      .catch(error => {
         closeModal.classList.remove('inother-position');
-        console.log(e);
+        console.error(error);
       });
 
-    heroSection.style = `
-   background: linear-gradient(86.47deg, #111111 33.63%, rgba(17, 17, 17, 0) 76.86%),url('https://image.tmdb.org/t/p/original${backdrop_path}');
-   background-repeat: no-repeat;
-   background-size: cover;
-    `;
+    heroSection.style.background = `linear-gradient(86.47deg, #111111 33.63%, rgba(17, 17, 17, 0) 76.86%),url('https://image.tmdb.org/t/p/original${backdrop_path}')`;
+    heroSection.style.backgroundRepeat = 'no-repeat';
+    heroSection.style.backgroundSize = 'cover';
 
-    heroTitle.innerHTML = `${title || name}`;
+    heroTitle.innerHTML = title || name;
     heroText.innerHTML = `${overview.slice(0, 90)}...`;
 
     if (screenWidth >= 768 && screenWidth < 1280) {
@@ -116,35 +107,20 @@ trendingFilms_DAY()
 
     heroTrailerBTN.textContent = 'Watch trailer';
     heroMoreBTN.classList.remove('ishidden');
-    // heroRaiting.classList.remove('ishidden');
-
-    if (heroTrailerBTN.textContent === 'Watch trailer') {
-      heroTrailerBTN.addEventListener('click', onOpenModalTrailer);
-    }
-
+    heroTrailerBTN.addEventListener('click', onOpenModalTrailer);
     closeModal.addEventListener('click', onCloseModalTrailer);
   })
-  .catch(e => {
+  .catch(error => {
     heroTrailerBTN.textContent = 'Get Started';
     heroMoreBTN.classList.add('ishidden');
-    console.log(e);
+    console.error(error);
   });
-// API=====================================
-// "w92": ширина 92 пикселя
-// "w154": ширина 154 пикселя
-// "w185": ширина 185 пикселей
-// "w342": ширина 342 пикселя
-// "w500": ширина 500 пикселей
-// "w780": ширина 780 пикселей
-// "original": оригинальный размер изображения
-// `https://www.youtube.com/embed/${trailer.key}`;
 
-// YUOTUBE_PLAYER====================================
-
+// YOUTUBE PLAYER
 function onYouTubeIframeAPIReady(id) {
   const player = new YT.Player('trailer-video', {
     height: '240',
     width: '320',
-    videoId: `${id}`,
+    videoId: id,
   });
 }
