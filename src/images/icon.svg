@@ -76,6 +76,9 @@
       <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
       </symbol>
       </svg>
+      <symbol id="icon-close_X" viewBox="0 0 32 32">
+      <path fill="none" stroke="#f8f8f8" style="stroke: var(--color1, #f8f8f8)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M30 30l-28-28M30 2l-28 28"></path>
+      </symbol>
   </defs>
 </svg>
 
