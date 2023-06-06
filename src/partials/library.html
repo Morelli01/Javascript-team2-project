@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dream Cinema</title>
+    <link rel="stylesheet" href="/src/Css/library.css" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="container">
+        <div class="wrapper">
+          <h1 class="hero-text">Create Your Dream Cinema</h1>
+        </div>
+        <p class="hero-description">
+          Is a guide to designing a personalized movie theater experience with
+          the right equipment, customized decor, and favorite films. This guide
+          helps you bring the cinema experience into your own home with cozy
+          seating, dim lighting, and movie theater snacks.
+        </p>
+      </div>
+    </section>
+
+    <section class="error-section">
+      <div class="container">
+        <h2 class="error-message">
+          OOPS...<br />
+          We are very sorry!<br />
+          You don’t have any movies at your library.
+        </h2>
+        <button class="search-button">Search Movie</button>
+      </div>
+    </section>
+
+    <section class="library-section is-hidden">
+      <div class="container">
+        <div class="dropdown">
+          <button class="dropdown-button">Genre</button>
+          <div class="dropdown-content">
+            <ul class="genre-list">
+              <li data-genre="All">All</li>
+              <li data-genre="Romance">Romance</li>
+              <li data-genre="Detective">Detective</li>
+              <li data-genre="Thriller">Thriller</li>
+              <li data-genre="Action">Action</li>
+              <li data-genre="Documentary">Documentary</li>
+              <li data-genre="Horror">Horror</li>
+            </ul>
+          </div>
+          <ul class="search_film_list list"></ul>
+        </div>
+      </div>
+    </section>
+    <script src="/src/javascript/mylibraryapi.js" type="module"></script>
+    <script src="/src/javascript/librarymain.js" type="module"></script>
+  </body>
+</html>
