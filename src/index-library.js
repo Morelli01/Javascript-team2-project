@@ -1,5 +1,4 @@
 import('./javascript/api');
-import('./javascript/trends');
 import('./javascript/film-month');
 import('./javascript/dark-light');
 import('./javascript/header-menu');

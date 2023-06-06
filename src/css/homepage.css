@@ -17,6 +17,13 @@
 .weekly_trends {
   padding: 80px 32px 60px;
 }
+.flex-wrap {
+  width: 100%;
+}
+.flex-wrap-rating {
+  display: flex;
+  justify-content: space-between;
+}
 
 .weekly_trends_title {
   font-family: var(--font-family-primary);
@@ -77,7 +84,7 @@
 .weekly_trends_list_item:hover,
 .weekly_trends_list_item:focus {
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px 10px,
+  box-shadow: rgba(50, 50, 93, 0.25) 0 10px 20px 10px,
   rgba(0, 0, 0, 0.3) 0 10px 7px -2px;
   transform: scale(1.03) translateZ(10px);
   border-radius: 5px;
@@ -524,5 +531,28 @@
   }
 
 }
+
+
+:root {
+  --star-size: 16px;
+  --star-color: white;
+  --star-background: rgba(248, 65, 25, 1);
+  --rating: 0;
+}
+
+.film_rating {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  line-height: 1;
+}
+.film_rating::before {
+   content: '★★★★★';
+   letter-spacing: 3px;
+   background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
 
 

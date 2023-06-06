@@ -1,15 +1,19 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
+// import { spinnerStart, spinnerStop } from './spin';
 
 (async () => {
+  spinnerStart()
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
   const film = await getRandomFilmOfMonth();
   console.log('filmMonth', film);
 
   const genres = await getGenres();
+  spinnerStop()
 
-  const divEl = document.querySelector('.film-month_wrapper');
-  if (divEl) {
+  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+  if (filmMonthWrapper) {
     const resultMarkup = createMarkup(film, genres);
-    divEl.innerHTML = resultMarkup;
+    filmMonthWrapper.innerHTML = resultMarkup;
   }
 })();
 
@@ -17,6 +21,7 @@ const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
   const overview = film.overview;
+  const title = film.original_title;
 
 
   const releaseDate = new Date(film.release_date);
@@ -36,11 +41,11 @@ const createMarkup = (film, genres) => {
 
   return `
     <div class='film-month_image'>
-      <img class='film-month_img' src='${imageSrc}'>
+      <img class='film-month_img movie-image' src='${imageSrc}' alt=''>
     </div>
     <div class='film-month_content'>
       <div>
-        <h3 class='film-month_info-title'>The lost city</h3>
+        <h3 class='film-month_info-title'>${title}</h3>
       </div>
       <div class='film-month_info'>
         <div class='film-month_info-item'>
