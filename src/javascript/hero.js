@@ -53,7 +53,7 @@ async function trailer(id) {
         'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
     },
   };
-  response = await axios.request(options);
+  const response = await axios.request(options);
   return response.data.results;
 }
 
@@ -142,7 +142,7 @@ trendingFilms_DAY()
 // YUOTUBE_PLAYER====================================
 
 function onYouTubeIframeAPIReady(id) {
-  player = new YT.Player('trailer-video', {
+  const player = new YT.Player('trailer-video', {
     height: '240',
     width: '320',
     videoId: `${id}`,
