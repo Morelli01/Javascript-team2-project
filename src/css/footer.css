@@ -1,0 +1,93 @@
+.footer {
+  font-size: 14px;
+  color: #b7b7b7;
+  line-height: 1.8;
+  background-color: #111111;
+}
+
+.footer .container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footer-text-none {
+  text-decoration: none;
+}
+.footer-text {
+  display: inline-block;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-body {
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.popup-team {
+  position: relative;
+  background-color: aliceblue;
+  color: white;
+  padding: 20px 10px;
+  width: 670px;
+  height: 300px;
+  border-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/tab.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: auto;
+}
+@media screen and (min-width: 768px) {
+  .popup-team {
+    display: flex;
+    list-style: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popup-team {
+    width: 900px;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: transparent;
+}
+.modal-team {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body--modal-open {
+  overflow: hidden;
+}
