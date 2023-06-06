@@ -41,7 +41,7 @@ const createMarkup = (film, genres) => {
 
   return `
     <div class='film-month_image'>
-      <img class='film-month_img movie-image' src='${imageSrc}' alt=''>
+      <img class='film-month_img' src='${imageSrc}' alt=''>
     </div>
     <div class='film-month_content'>
       <div>
