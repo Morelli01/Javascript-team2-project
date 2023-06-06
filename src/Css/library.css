@@ -46,7 +46,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-.hero {
+.hero-library {
   background: linear-gradient(
       79.49deg,
       #111111 34.1%,
@@ -60,7 +60,7 @@ body {
   padding-bottom: 144px;
 }
 
-.hero-text {
+.hero-text-library {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -74,7 +74,7 @@ body {
   margin-bottom: 8px;
   padding-left: 20px;
 }
-.hero-description {
+.hero-description-library {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -258,7 +258,7 @@ body {
   .search_film {
     padding-top: 60px;
   }
-  .hero {
+  .hero-library {
     background: linear-gradient(
         77.77deg,
         #111111 33.58%,
@@ -270,7 +270,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .hero-text {
+  .hero-text-library {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -282,7 +282,7 @@ body {
     max-width: 332px;
     padding-left: 32px;
   }
-  .hero-description {
+  .hero-description-library {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -351,7 +351,7 @@ body {
   .search_film_wrap {
     left: 20px;
   }
-  .hero {
+  .hero-library {
     background: linear-gradient(
         80.53deg,
         #111111 31.92%,
@@ -363,7 +363,7 @@ body {
     padding-top: 229px;
     padding-bottom: 341px;
   }
-  .hero-text {
+  .hero-text-library {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -423,23 +423,4 @@ body {
   .library-section {
     padding-top: 110px;
   }
-}
-.btn-library {
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-library:hover {
-  background-color: #ddd;
-}
-
-.pickgenre {
-  color: #b7b7b7;
 }
