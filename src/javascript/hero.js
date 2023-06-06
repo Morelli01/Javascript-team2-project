@@ -53,7 +53,7 @@ async function trailer(id) {
         'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZmE1ZDU3ODY5YzBmYzQ2YWI2YjI3MDJhZDllNjZmZSIsInN1YiI6IjY0NzhjNTUwMGUyOWEyMDExNmFiOGIwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ciIvtOhfPeTztNv-gkHSd2chqAc4xOBK5Ti6nPXDtE',
     },
   };
-  const response = await axios.request(options);
+  response = await axios.request(options);
   return response.data.results;
 }
 
@@ -69,7 +69,7 @@ async function trendingFilms_DAY() {
     },
   };
 
-  const response = await axios.request(options);
+  response = await axios.request(options);
   console.log(response.data);
   return response.data;
 }
@@ -142,7 +142,7 @@ trendingFilms_DAY()
 // YUOTUBE_PLAYER====================================
 
 function onYouTubeIframeAPIReady(id) {
-  const player = new YT.Player('trailer-video', {
+  player = new YT.Player('trailer-video', {
     height: '240',
     width: '320',
     videoId: `${id}`,
