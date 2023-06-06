@@ -12,4 +12,6 @@ import("./javascript/pagination");
 import("./javascript/scroll");
 import("./javascript/stars");
 import("./javascript/trailer")
+import("./javascript/spin");
+import("./javascript/scroll");
 import("./javascript/footer");
