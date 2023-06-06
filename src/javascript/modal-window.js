@@ -51,7 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   const openModalButton = document.getElementById('openModalButton');
-  openModalButton.addEventListener('click', openModal);
+  openModalButton.addEventListener('click', () => {
+    const movieId = openModalButton.dataset.movieId;
+    openModal(movieId);
+  });
 
   const closeButton = modal.querySelector('.modal-close-btn');
   closeButton.addEventListener('click', closeModal);
