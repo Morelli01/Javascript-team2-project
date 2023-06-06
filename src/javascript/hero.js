@@ -69,7 +69,7 @@ async function trendingFilms_DAY() {
     },
   };
 
-  response = await axios.request(options);
+  const response = await axios.request(options);
   console.log(response.data);
   return response.data;
 }
