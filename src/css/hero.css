@@ -302,7 +302,13 @@
         line-height: calc(24/16);
     }
 
-
+    .trailer-modal {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
 
     .trailer-text {
         position: relative;
