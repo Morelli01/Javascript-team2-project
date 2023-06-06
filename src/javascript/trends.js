@@ -4,7 +4,11 @@ import { round } from './utils';
 
 (async () => {
   // spinnerStart()
-  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+  if (
+    (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
+    &&
+    (window.location.pathname !== '/Javascript-team2-project/' && window.location.pathname !== '/Javascript-team2-project/index.html')
+  ) return;
   const films = await getFilms(1);
 
   const topThree = films.results.slice(0, 3);
