@@ -1,6 +1,9 @@
 import { getFilms, getGenres } from './api';
+import { spinnerStart, spinnerStop } from './spin';
 
 (async () => {
+  // spinnerStart()
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
   const films = await getFilms(1);
 
   const topThree = films.results.slice(0, 3);
@@ -16,8 +19,9 @@ import { getFilms, getGenres } from './api';
       resultMarkup += await createItemMarkup(film, genres);
     }
   }
-
+  // spinnerStop()
   document.querySelector('.weekly_trends_list').innerHTML = resultMarkup;
+
 })();
 
 const createItemMarkup = async (film, genres) => {
@@ -33,13 +37,17 @@ const createItemMarkup = async (film, genres) => {
     .join(', ');
 
   return `<li class='weekly_trends_list_item' data-film-id='${film.id}'>
-        <img src='${imageSrc}'>
+        <img class='movie-image' src='${imageSrc}' alt=''>
         <div class='weekly-trends_description'>
-          <div>
+          <div class='flex-wrap'>
             <h4 class='film_title'>${title}</h4>
-            <h5 class='film_description'>${filmGenres}<span class='separator'> | </span>${releaseYear}</h5>
+            <div class='flex-wrap-rating'>
+            <h5 class='film_description'>${filmGenres}<span class='separator'>|</span>${releaseYear}</h5>
+            <div class='film_rating-wrapper'>
+              <div class="film_rating" style="--rating: ${voteAverage / 2};" aria-label="Rating of this product is 2.3 out of 5."></div>
+            </div></div>
+
           </div>
-          <div class='rating'>${voteAverage}</div>
         </div>
       </li>`;
 };
