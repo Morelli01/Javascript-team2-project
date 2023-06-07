@@ -40,43 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function generateFilmMarkup(data) {
-    return data
-      .map(
-        ({
-          poster_path,
-          original_name,
-          original_title,
-          genre_ids,
-          release_date,
-          vote_average,
-          first_air_date,
-        }) => {
-          let url = poster_path
-            ? `https://image.tmdb.org/t/p/original${poster_path}`
-            : 'https://www.tgv.com.my/assets/images/404/movie-poster.jpg';
-          const year = yearsFilm(release_date, first_air_date);
-          let genre = categoriesFilms(genre_ids);
-          let starsClass = vote_average ? '' : 'is-hidden'; // Установка класса по умолчанию
-          return `<li class="search_film_img_wrap">
-            <img src="${url}" alt="${
-            original_name || original_title
-          }" width="395" height="574" class="search_film_img" />
-            <div class="wrap">
-              <div class="search_film_wrap">
-                <p class="search_film_title">${
-                  original_name || original_title
-                }</p>
-                <p class="search_film_genre">${genre} | ${year}</p>
-                <p class="stars ${starsClass}">${vote_average}</p> <!-- Использование класса -->
-              </div>
-            </div>
-          </li>`;
-        }
-      )
-      .join('');
-  }
-
   function categoriesFilms(genreIds) {
     let categoriesFilm = genreIds
       .filter(genre => genre !== undefined)

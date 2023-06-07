@@ -1,9 +1,14 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
 import { spinnerStart, spinnerStop } from './spin';
+import { round } from './utils';
 
 (async () => {
   // spinnerStart()
-  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+  if (
+    (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
+    &&
+    (window.location.pathname !== '/Javascript-team2-project/' && window.location.pathname !== '/Javascript-team2-project/index.html')
+  ) return;
   const film = await getRandomFilmOfMonth();
   console.log('filmMonth', film);
 
@@ -41,7 +46,7 @@ const createMarkup = (film, genres) => {
 
   return `
     <div class='film-month_image'>
-      <img class='film-month_img movie-image' src='${imageSrc}' alt=''>
+      <img class='film-month_img' src='${imageSrc}' alt=''>
     </div>
     <div class='film-month_content'>
       <div>
@@ -62,7 +67,7 @@ const createMarkup = (film, genres) => {
         </div>
         <div class='film-month_info-item'>
           <span class='film-month_info-label'>Popularity</span>
-          <span class='film-month_info-value span-value'>${popularity}</span>
+          <span class='film-month_info-value span-value'>${round(popularity, 10)}</span>
         </div>
         <div class='film-month_info-item'>
           <span class='film-month_info-label'>Genre</span>

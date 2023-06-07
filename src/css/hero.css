@@ -8,6 +8,8 @@
 
 /* ====================================================== */
 .hero {
+    max-width: 1280px;
+    margin: 0 auto;
     position: relative;
     padding-left: 20px;
     height: 380px;
@@ -17,6 +19,7 @@
     background-size: cover;
     background-color: var(--color-primary)
 }
+
 
 
 .hero-title {
@@ -60,6 +63,15 @@
     border-radius: 74px;
     border: none;
     cursor: pointer;
+    transition: var(--primary-duration-timing)
+}
+
+.hero-getstarted-btn:hover,
+.hero-getstarted-btn:focus {
+    color: #F87719;
+    background: #FFFFFF;
+    border: 1px solid #F87719;
+
 }
 
 .hero-moredetails-btn {
@@ -75,10 +87,17 @@
     border: 1px solid #FFFFFF;
     border-radius: 74px;
     cursor: pointer;
-
+    transition: var(--primary-duration-timing)
 }
 
 
+
+.hero-moredetails-btn:hover,
+.hero-moredetails-btn:focus {
+    color: #F87719;
+    background: #FFFFFF;
+    border: 1px solid #F87719;
+}
 
 .trailer-modal {
     position: absolute;
@@ -120,6 +139,8 @@
     cursor: pointer;
     z-index: 2;
 }
+
+
 
 .trailer-svg-close.inother-position {
     top: -14px;
@@ -215,7 +236,7 @@
 
 
     .trailer-text {
-        width: 70%;
+        width: 50%;
         padding: 132px 0 0 44px;
         font-size: 24px;
         line-height: calc(28/24)
@@ -300,14 +321,6 @@
     .hero-moredetails-btn {
         font-size: 16px;
         line-height: calc(24/16);
-    }
-
-    .trailer-modal {
-        width: 80%;
-        height: 70%;
-        display: flex;
-        justify-content: center;
-        align-items: center
     }
 
     .trailer-text {

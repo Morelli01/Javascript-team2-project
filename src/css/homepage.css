@@ -22,9 +22,11 @@
 .weekly_trends {
   padding: 80px 32px 60px;
 }
+
 .flex-wrap {
   width: 100%;
 }
+
 .flex-wrap-rating {
   display: flex;
   justify-content: space-between;
@@ -90,7 +92,7 @@
 .weekly_trends_list_item:focus {
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0 10px 20px 10px,
-  rgba(0, 0, 0, 0.3) 0 10px 7px -2px;
+    rgba(0, 0, 0, 0.3) 0 10px 7px -2px;
   transform: scale(1.03) translateZ(10px);
   border-radius: 5px;
 }
@@ -166,7 +168,11 @@
 }
 
 .film-month_image {
-  width: 805px;
+  /*width: 805px;*/
+  min-width: 805px;
+  display: flex;
+  flex-wrap: nowrap;
+
 }
 
 .film-month_img {
@@ -252,7 +258,7 @@
 }
 
 .film-month_button {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .film-month_button-add {
@@ -284,8 +290,7 @@
   position: relative;
 }
 
-.film-month_button {
-}
+.film-month_button {}
 
 .weekly_trends_list {
   display: flex;
@@ -376,17 +381,17 @@
     flex-wrap: wrap;
   }
 
-  .film-month_info > * {
+  .film-month_info>* {
     flex-basis: 50%;
   }
 
-  .film-month_info > :nth-child(1),
-  .film-month_info > :nth-child(3) {
+  .film-month_info> :nth-child(1),
+  .film-month_info> :nth-child(3) {
     order: 1;
   }
 
-  .film-month_info > :nth-child(2),
-  .film-month_info > :nth-child(4) {
+  .film-month_info> :nth-child(2),
+  .film-month_info> :nth-child(4) {
     order: 2;
   }
 
@@ -411,7 +416,7 @@
   }
 }
 
-@media screen and (min-width: 360px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
 
 
   .weekly_trends_list_item {
@@ -469,7 +474,8 @@
     padding: 0;
   }
 
-  .film_title, .film_description {
+  .film_title,
+  .film_description {
     font-size: 12px;
     line-height: 1.7;
   }
@@ -497,7 +503,7 @@
 
   .film-month_image {
     flex-direction: column;
-    width: 100%;
+    min-width: 280px;
     margin-bottom: 24px;
 
   }
@@ -570,13 +576,11 @@
   font-size: var(--star-size);
   line-height: 1;
 }
+
 .film_rating::before {
-   content: '★★★★★';
-   letter-spacing: 4px;
-   background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+  content: '★★★★★';
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-
-

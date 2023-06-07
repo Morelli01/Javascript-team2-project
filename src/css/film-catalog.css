@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 .container {
-  max-width: 320px;
+  min-width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
