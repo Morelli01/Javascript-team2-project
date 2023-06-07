@@ -27,7 +27,7 @@
   border-radius: 5px;
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
   z-index: 10000;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .modal-content {
@@ -107,6 +107,7 @@
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
+  overflow-y: auto;
 }
 
 .modal-form-submit {
