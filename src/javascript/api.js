@@ -1,4 +1,5 @@
 'use strict';
+import { async } from '@vimeo/player';
 import axios from 'axios';
 
 const apiKey = '97fe01addf81f73693338979426ece1e';
@@ -71,9 +72,21 @@ const getCategoriesQuery = async (query, page) => {
     console.log(err);
   }
 }
+const getCategoriesId = async (id) => {
+  const endpoint = `movie/${id}`;
+  const { data } = await axios.get(
+    `${baseUrl}/${endpoint}?api_key=${apiKey}&language=en-US`
+  );
+  try {
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
 export {
   getFilms,
   getRandomFilmOfMonth,
   getGenres,
-  getCategoriesQuery
+  getCategoriesQuery,
+  getCategoriesId
 }

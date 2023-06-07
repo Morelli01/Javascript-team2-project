@@ -3,25 +3,21 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-  // spinnerStart()
-  if (
-    (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
-    &&
-    (window.location.pathname !== '/Javascript-team2-project/' && window.location.pathname !== '/Javascript-team2-project/index.html')
-  ) return;
+  spinnerStart();
+  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+  if (!filmMonthWrapper) return;
   const film = await getRandomFilmOfMonth();
   console.log('filmMonth', film);
 
   const genres = await getGenres();
   // spinnerStop()
 
-  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+
   if (filmMonthWrapper) {
-    const resultMarkup = createMarkup(film, genres);
-    filmMonthWrapper.innerHTML = resultMarkup;
+    filmMonthWrapper.innerHTML = createMarkup(film, genres);
   }
 })();
-
+spinnerStop();
 const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
@@ -79,7 +75,7 @@ const createMarkup = (film, genres) => {
         <p class='film-month_about-description'>${overview}</p>
       </div>
       <div class='film-month_button'>
-        <button class='film-month_button-add'>Add to my library</button>
+        <button class='button film-month_button-add'>Add to my library</button>
       </div>
     </div>
   `;
