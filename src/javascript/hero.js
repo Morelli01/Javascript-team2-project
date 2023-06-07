@@ -36,12 +36,13 @@ if (screenWidth >= 768) {
 // EVENT FUNCTION=====================================
 
 function handleKeyDown(event) {
-  console.log(event.key);
   if (event.key === 'Escape') {
     trailerModal.classList.add('ishidden');
     heroTrailerBTN.classList.remove('blocked-element');
     document.removeEventListener('keydown', handleKeyDown);
-    player.pauseVideo();
+    if (closeModal.classList.contains('inother-position')) {
+      player.pauseVideo();
+    }
   }
 }
 
@@ -59,7 +60,9 @@ function onCloseModalTrailer() {
   trailerModal.classList.add('ishidden');
   heroTrailerBTN.classList.remove('blocked-element');
   document.removeEventListener('keydown', handleKeyDown);
-  player.pauseVideo();
+  if (closeModal.classList.contains('inother-position')) {
+    player.pauseVideo();
+  }
   // document.body.classList.remove('noScroll');
 }
 
@@ -92,7 +95,6 @@ async function trendingFilms_DAY() {
   };
 
   const response = await axios.request(options);
-  console.log(response.data);
   return response.data;
 }
 
@@ -109,17 +111,14 @@ trendingFilms_DAY()
 
     trailer(id)
       .then(data => {
-        console.log(data.length);
         if (data.length === 0) {
           return;
         }
         onYouTubeIframeAPIReady(data[getRandomNumber(0, data.length)].key);
         closeModal.classList.add('inother-position');
-        console.log(data);
       })
       .catch(e => {
         closeModal.classList.remove('inother-position');
-        console.log('NO TRAILER', e);
       });
 
     heroSection.style = `
@@ -161,13 +160,3 @@ trendingFilms_DAY()
     heroMoreBTN.classList.add('ishidden');
     heroRating.classList.add('ishidden');
   });
-
-// API=====================================
-// "w92": ширина 92 пикселя
-// "w154": ширина 154 пикселя
-// "w185": ширина 185 пикселей
-// "w342": ширина 342 пикселя
-// "w500": ширина 500 пикселей
-// "w780": ширина 780 пикселей
-// "original": оригинальный размер изображения
-// `https://www.youtube.com/embed/${trailer.key}`;
