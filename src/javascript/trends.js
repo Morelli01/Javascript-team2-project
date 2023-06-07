@@ -3,7 +3,7 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-  // spinnerStart()
+spinnerStart()
   if (
     (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
     &&
@@ -28,7 +28,7 @@ import { round } from './utils';
   document.querySelector('.weekly_trends_list').innerHTML = resultMarkup;
 
 })();
-
+spinnerStop();
 const createItemMarkup = async (film, genres) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
   const imageSrc = baseUrl + film.backdrop_path;
