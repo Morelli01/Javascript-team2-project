@@ -2,6 +2,7 @@
 import { getFilms, getGenres, getCategoriesQuery } from './api';
 import { createPagination } from './pagination';
 import { round } from './utils';
+import { onClickFilm, favoriteArr } from './local_storage'; //*-------
 
 const refs = {
   ulEl: document.querySelector('.search_film_list'),
@@ -36,7 +37,6 @@ function markupFilm(data) {
       ({
         id,
         poster_path,
-        original_name,
         original_title,
         genre_ids,
         release_date,
@@ -48,7 +48,9 @@ function markupFilm(data) {
           : 'https://www.tgv.com.my/assets/images/404/movie-poster.jpg';
         const year = yearsFilm(release_date, first_air_date);
         let genre = categoriesFilms(genre_ids);
-        return `<li class='weekly_trends_list_item' data-film-id='${id}'>
+        const inStorage = favoriteArr.some(film => film.id === id); //*-------
+        const buttonText = inStorage ? 'Remove from my library' : 'Add to my library';  //*-------
+        return `<li class='weekly_trends_list_item' data-id='${id}'>
         <img class='movie-image' src='${url}' alt=''>
         <div class='weekly-trends_description'>
           <div class='flex-wrap'>
@@ -64,7 +66,7 @@ function markupFilm(data) {
         )} out of 5.'></div>
             </div>
           </div>
-
+          <button type="button" class="js_add_collection" data-id="${id}">${buttonText}</button> //*-------
           </div>
         </div>
       </li>`;
@@ -73,6 +75,8 @@ function markupFilm(data) {
     .join('');
   refs.ulEl.innerHTML = markup;
 }
+
+refs.ulEl.addEventListener('click', onClickFilm); //*-------
 
 function categoriesFilms(genreIds) {
   let categoriesFilm = [];
