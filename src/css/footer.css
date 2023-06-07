@@ -13,7 +13,7 @@
   text-align: center;
 }
 .footer-text-none {
-  text-decoration: none;
+  text-decoration: underline;
 }
 .footer-text {
   display: inline-block;
@@ -36,39 +36,22 @@
   visibility: visible;
 }
 .popup-body {
-  margin: 0;
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .popup-team {
-  position: relative;
   background-color: aliceblue;
   color: white;
-  padding: 20px 10px;
-  width: 670px;
-  height: 300px;
   border-radius: 10px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  background-image: url(../images/tab.png);
+  background-image: url(../images/backgraund2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: auto;
 }
-@media screen and (min-width: 768px) {
-  .popup-team {
-    display: flex;
-    list-style: none;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .popup-team {
-    width: 900px;
-  }
+
+.body--modal-open {
+  overflow: hidden;
 }
 
 .btn-close {
@@ -76,18 +59,67 @@
   top: 10px;
   right: 10px;
   border-radius: 50%;
-  background-color: white;
+  background-color: transparent;
   border-color: transparent;
-}
-.modal-team {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 100;
+
   display: flex;
+  align-items: center;
   justify-content: center;
+
+  width: 35px;
+  height: 35px;
+}
+
+.splide {
+  padding: 20px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  text-align: center;
   align-items: center;
 }
-.body--modal-open {
-  overflow: hidden;
+.icon-close {
+  fill: #f8f8f8;
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: #f87719;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-content {
+    width: 130px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-content {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-content {
+    height: 190px;
+  }
+}
+.team-title {
+  font-size: 20;
+  color: #f87719;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.team-text {
+  font-size: 14;
+  color: #f87719;
+  line-height: 1.2;
+  gap: 15px;
+}
+
+.team-links {
+  color: greenyellow;
 }
