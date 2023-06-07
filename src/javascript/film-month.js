@@ -79,7 +79,7 @@ const createMarkup = (film, genres) => {
         <p class='film-month_about-description'>${overview}</p>
       </div>
       <div class='film-month_button'>
-        <button class='film-month_button-add'>Add to my library</button>
+        <button class='button film-month_button-add'>Add to my library</button>
       </div>
     </div>
   `;
