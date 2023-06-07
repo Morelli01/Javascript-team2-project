@@ -39,9 +39,9 @@ function initModal() {
                 movieDetails.innerHTML = `
             <tr>
               <td>Vote / Votes</td>
-              <td class='value-number'>${round(voteAverage, 10)}</td>
+              <td class='value-number' style = "color: black;display: inline-block;align-items: center;">${round(voteAverage, 10)}</td>
               <td class='value-separator'>/</td>
-              <td class='value-number'>${voteCount}</td>
+              <td class='value-number' style ='color: black'>${voteCount}</td>
             </tr>
             <tr>
               <td>Popularity</td>
@@ -84,5 +84,11 @@ function initModal() {
             openModal(movieId);
         });
 
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            closeModal();
+        }
     });
 };
