@@ -50,7 +50,6 @@ function onOpenModalTrailer(e) {
   e.preventDefault();
   trailerModal.classList.remove('ishidden');
   heroTrailerBTN.classList.add('blocked-element');
-
   document.addEventListener('keydown', handleKeyDown);
 
   // document.body.classList.add('noScroll');
@@ -148,6 +147,7 @@ trendingFilms_DAY()
 
     heroTrailerBTN.textContent = 'Watch trailer';
     heroMoreBTN.classList.remove('ishidden');
+    heroTrailerBTN.classList.remove('is-hidden');
 
     if (heroTrailerBTN.textContent === 'Watch trailer') {
       heroTrailerBTN.addEventListener('click', onOpenModalTrailer);
