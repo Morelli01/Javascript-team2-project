@@ -138,6 +138,13 @@
         display:block;
         color:#808080;
         margin-left: 40px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .active{
+        color:orange;
     }
     .hidden{
         visibility: hidden;
@@ -169,6 +176,9 @@
     }
     .menu-link:hover,
     .menu-link:focus{
+        color:orange;
+    }
+    .menu-link.active{
         color:orange;
     }
     .header.open .menu {
