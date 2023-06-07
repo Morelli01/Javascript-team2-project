@@ -54,9 +54,7 @@ body {
     ),
     url('/src/images/BG/mobile-bg-my_library\ -x1-min.jpg');
   background-size: cover;
-  text-align: center;
   color: white;
-  padding-top: 40px;
   padding-bottom: 144px;
 }
 
@@ -231,10 +229,22 @@ body {
   padding: 14px 92px 10px 20px;
   cursor: pointer;
 }
-
+.hero-title.library-hit {
+  padding: 0px;
+  text-align: left;
+  max-width: 235px;
+}
+.hero-text.library-hit {
+  padding: 0px;
+  text-align: left;
+  max-width: 250px;
+}
 .genre-list li:hover {
   color: #ffffff;
   background-color: #333333;
+}
+.hero-title.library-hit {
+  padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -270,7 +280,6 @@ body {
         rgba(17, 17, 17, 0) 71.57%
       ),
       url(/src/images/BG/tablet-bg-my_library\ -x1-min.jpg);
-    padding-top: 62px;
     padding-bottom: 118px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -332,6 +341,19 @@ body {
   .library-section {
     padding-top: 80px;
   }
+  .hero-title.library-hit {
+    padding: 0px;
+    text-align: left;
+    max-width: 332px;
+  }
+  .hero-text.library-hit {
+    padding: 0px;
+    text-align: left;
+    max-width: 360px;
+  }
+  .hero-title.library-hit {
+    padding-top: 62px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .container {
@@ -363,7 +385,6 @@ body {
       url(/src/images/BG/desctop-bg-my_library\ -x1-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 229px;
     padding-bottom: 341px;
   }
   .hero-text-library {
@@ -424,4 +445,32 @@ body {
   .library-section {
     padding-top: 110px;
   }
+  .hero-title.library-hit {
+    padding: 0px;
+    text-align: left;
+    max-width: 464px;
+  }
+  .hero-text.library-hit {
+    padding: 0px;
+    text-align: left;
+    max-width: 464px;
+  }
+  .hero-title.library-hit {
+    padding-top: 169px;
+  }
+}
+.library-btn-h {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.rating-box.library-box {
+  display: flex;
 }
