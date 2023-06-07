@@ -39,7 +39,7 @@ const createItemMarkup = async (film, genres) => {
     .map(({ name }) => name)
     .join(', ');
 
-  return `<li class='weekly_trends_list_item' data-film-id='${film.id}'>
+  return `<li class='weekly_trends_list_item list_item' data-film-id='${film.id}'>
         <img class='movie-image' src='${imageSrc}' alt=''>
         <div class='weekly-trends_description'>
           <div class='flex-wrap'>
