@@ -91,4 +91,4 @@ function initModal() {
             closeModal();
         }
     });
-};
+}
