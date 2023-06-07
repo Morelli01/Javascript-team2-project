@@ -1,6 +1,7 @@
 'use strict';
 import { getFilms, getGenres, getCategoriesQuery } from './api';
 import { createPagination } from './pagination';
+import { round } from './utils';
 
 const refs = {
   ulEl: document.querySelector('.search_film_list'),
@@ -47,18 +48,26 @@ function markupFilm(data) {
           : 'https://www.tgv.com.my/assets/images/404/movie-poster.jpg';
         const year = yearsFilm(release_date, first_air_date);
         let genre = categoriesFilms(genre_ids);
-        return `<li class="search_film_img_wrap" data-film-id="${id}">
-  <img src="${url}" alt="${original_name || original_title}"
-    width="395" height="574" class="search_film_img"/>
-  <div class="wrap">
-    <div class="search_film_wrap">
-      <p class="search_film_title">${original_name || original_title}</p>
-      <p class="search_film_genre">${genre} | ${year}</p>
-      <p class="stars is-hidden">${vote_average}</p>
-    </div>
-  
-  </div>
-  </li>`;
+        return `<li class='weekly_trends_list_item' data-film-id='${id}'>
+        <img class='movie-image' src='${url}' alt=''>
+        <div class='weekly-trends_description'>
+          <div class='flex-wrap'>
+            <h4 class='film_title'>${original_title}</h4>
+            <div class='flex-wrap-rating'>
+            <h5 class='film_description'>${genre}<span class='separator'>|</span>${year}</h5>
+            <div class='film_rating-wrapper'>
+                          <div class='film_rating' style='--rating: ${
+                            vote_average / 2
+                          };' aria-label='Rating of this film is ${round(
+          vote_average / 2,
+          10
+        )} out of 5.'></div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </li>`;
       }
     )
     .join('');
