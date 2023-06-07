@@ -3,7 +3,7 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-  // spinnerStart()
+  spinnerStart();
   const filmMonthWrapper = document.querySelector('.film-month_wrapper');
   if (!filmMonthWrapper) return;
   const film = await getRandomFilmOfMonth();
@@ -17,7 +17,7 @@ import { round } from './utils';
     filmMonthWrapper.innerHTML = createMarkup(film, genres);
   }
 })();
-
+spinnerStop();
 const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;

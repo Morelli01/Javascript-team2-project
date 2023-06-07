@@ -3,10 +3,9 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-  // spinnerStart()
+spinnerStart()
   const weeklyTrends = document.querySelector('.weekly_trends_list');
   if (!weeklyTrends) return;
-
 
   const films = await getFilms(1);
 
@@ -27,7 +26,7 @@ import { round } from './utils';
   weeklyTrends.innerHTML = resultMarkup;
 
 })();
-
+spinnerStop();
 const createItemMarkup = async (film, genres) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
   const imageSrc = baseUrl + film.backdrop_path;
