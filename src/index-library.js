@@ -13,3 +13,4 @@ import('./javascript/trailer');
 import('./javascript/spin');
 import('./javascript/scroll');
 import('./javascript/footer');
+import('./javascript/favorite');

@@ -42,7 +42,7 @@ function markupFilm(data) {
         release_date,
         vote_average,
         first_air_date,
-        original_name
+        original_name,
       }) => {
         let url = poster_path
           ? `https://image.tmdb.org/t/p/original${poster_path}`
@@ -50,22 +50,28 @@ function markupFilm(data) {
         const year = yearsFilm(release_date, first_air_date);
         let genre = categoriesFilms(genre_ids);
         const inStorage = favoriteArr.some(film => film.id === id); //*-------
-        const buttonText = inStorage ? 'Remove from my library' : 'Add to my library';  //*-------
+        const buttonText = inStorage
+          ? 'Remove from my library'
+          : 'Add to my library'; //*-------
         return `<li class="search_film_img_wrap movie-image list_item" data-id='${id}'>
         <img loga src="${url}" alt="${
-            original_name || original_title
-          }" width="395" height="574" class="search_film_img"/>
+          original_name || original_title
+        }" width="395" height="574" class="search_film_img"/>
         <div class="wrap">
           <div class="search_film_wrap">
             <p class="search_film_title">${original_name || original_title}</p>
             <p class="search_film_genre">${genre} | ${year}</p> 
             <div class="stars">
             <div class='film_rating-wrapper'>
-              <div class='film_rating' style='--rating: ${vote_average / 2};' aria-label='Rating of this film is ${round((vote_average / 2), 10)} out of 5.'></div>
+              <div class='film_rating' style='--rating: ${
+                vote_average / 2
+              };' aria-label='Rating of this film is ${round(
+          vote_average / 2,
+          10
+        )} out of 5.'></div>
             </div>
          </div>
           </div>
-          <button type="button" class="js_add_collection" data-id="${id}">${buttonText}</button>
         </div>
       </li>`;
       }
@@ -73,7 +79,11 @@ function markupFilm(data) {
     .join('');
   refs.ulEl.innerHTML = markup;
 }
-
+{
+  /* <button type="button" class="js_add_collection" data-id="${id}">
+  ${buttonText}
+</button>; */
+}
 refs.ulEl.addEventListener('click', onClickFilm); //*-------
 
 function categoriesFilms(genreIds) {
