@@ -1,7 +1,6 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
 import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
-import { onClickFilm, favoriteArr } from './local_storage';
 
 (async () => {
   spinnerStart();
@@ -19,7 +18,6 @@ import { onClickFilm, favoriteArr } from './local_storage';
   }
 })();
 spinnerStop();
-const filmMonthWrapper = document.querySelector('.film-month_wrapper');
 const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
@@ -37,17 +35,13 @@ const createMarkup = (film, genres) => {
   const voteAverage = film.vote_average;
   const voteCount = film.vote_count;
   const popularity = film.popularity;
-  const id = film.id;
-  const inStorage = favoriteArr.some(film => film.id === id);
-  const buttonText = inStorage ? 'Remove from my library' : 'Add to my library';
   const filmGenres = genres
     .filter((genre) => film.genre_ids.slice(0, 2).includes(genre.id))
     .map(({ name }) => name)
     .join(', ');
   return `
-    <li data-id='${id}>
       <div class='film-month_image'>
-        <img class='film-month_img' src='${imageSrc}' alt='' loading="lazy">
+        <img class='film-month_img' src='${imageSrc}' alt=''>
       </div>
       <div class='film-month_content'>
         <div>
@@ -80,11 +74,9 @@ const createMarkup = (film, genres) => {
           <p class='film-month_about-description'>${overview}</p>
         </div>
         <div class='film-month_button'>
-          <button class='button film-month_button-add' data-id="${id}">${buttonText}</button>
+          <button class='button film-month_button-add'>Add to my library</button>
         </div>
       </div>
-    </li>
   `;
 };
 
-filmMonthWrapper.addEventListener('click', onClickFilm);
