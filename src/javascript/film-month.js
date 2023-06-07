@@ -3,7 +3,7 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-  // spinnerStart()
+  spinnerStart();
   if (
     (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
     &&
@@ -21,7 +21,7 @@ import { round } from './utils';
     filmMonthWrapper.innerHTML = resultMarkup;
   }
 })();
-
+spinnerStop();
 const createMarkup = (film, genres) => {
   const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
