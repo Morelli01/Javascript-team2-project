@@ -25,6 +25,7 @@ function initModal() {
                 const data = response.data;
                 const title = data.title;
                 const voteCount = data.vote_count;
+                const voteAverage = data.vote_average;
                 const popularity = data.popularity;
                 const genre = data.genres[0].name;
                 const overview = data.overview;
@@ -35,7 +36,9 @@ function initModal() {
                 movieDetails.innerHTML = `
             <tr>
               <td>Vote / Votes</td>
-              <td>${voteCount}</td>
+              <td class='value-number'>${voteAverage}</td>
+              <td class='value-separator'>/</td>
+              <td class='value-number'>${voteCount}</td>
             </tr>
             <tr>
               <td>Popularity</td>
