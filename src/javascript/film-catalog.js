@@ -54,9 +54,9 @@ function markupFilm(data) {
           ? 'Remove from my library'
           : 'Add to my library'; //*-------
         return `<li class="search_film_img_wrap movie-image list_item" data-id='${id}'>
-        <img loga src="${url}" alt="${
-          original_name || original_title
-        }" width="395" height="574" class="search_film_img"/>
+        <img loading="lazy" src="${url}" alt="${
+            original_name || original_title
+          }" width="395" height="574" class="search_film_img"/>
         <div class="wrap">
           <div class="search_film_wrap">
             <p class="search_film_title">${original_name || original_title}</p>
