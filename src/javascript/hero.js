@@ -46,13 +46,26 @@ function handleKeyDown(event) {
   }
 }
 
+function onCloseTouchBody(event) {
+  if (
+    event.target.classList.contains('hero-wrapper-btn') ||
+    event.target.classList.contains('hero-getstarted-btn')
+  ) {
+    return;
+  }
+  if (!trailerModal.contains(event.target)) {
+    trailerModal.classList.add('ishidden');
+    heroTrailerBTN.classList.remove('blocked-element');
+    document.removeEventListener('click', onCloseTouchBody);
+  }
+}
+
 function onOpenModalTrailer(e) {
   e.preventDefault();
   trailerModal.classList.remove('ishidden');
   heroTrailerBTN.classList.add('blocked-element');
   document.addEventListener('keydown', handleKeyDown);
-
-  // document.body.classList.add('noScroll');
+  document.addEventListener('click', onCloseTouchBody);
 }
 
 function onCloseModalTrailer() {
@@ -62,7 +75,6 @@ function onCloseModalTrailer() {
   if (closeModal.classList.contains('inother-position')) {
     player.pauseVideo();
   }
-  // document.body.classList.remove('noScroll');
 }
 
 //TRAILER_VIDEO ===========================================================
