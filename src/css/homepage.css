@@ -261,30 +261,35 @@
   margin-top: 20px;
 }
 
-.film-month_button-add {
-  padding: 12px 24px;
-  gap: 10px;
-  min-width: 155px;
-  height: 40px;
-  align-items: center;
-  text-align: center;
-  line-height: 1.14;
+.button {
   background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
-  border-radius: 74px;
-  color: var(--color-primary);
-  font-weight: var(--font-weight-medium);
+  transition: background 250ms cubic-bezier(.4, 0, .2, 1), transform .1s ease-in, box-shadow .25s ease-in;
   outline: none;
   border: none;
   cursor: pointer;
-  transition: background 250ms cubic-bezier(.4, 0, .2, 1), transform .1s ease-in, box-shadow .25s ease-in;
+  align-items: center;
+  text-align: center;
+  border-radius: 74px;
 }
 
-.film-month_button-add:hover {
+.button:hover {
   background: linear-gradient(141.22deg, #F84119 9.4%, #FFC226 91.91%);
   transform: scale(1.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   color: #FFFFFF;
 }
+
+.film-month_button-add {
+  padding: 12px 24px;
+  gap: 10px;
+  min-width: 155px;
+  height: 40px;
+  line-height: 1.14;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+
+}
+
 
 .film-month_wrapper {
   position: relative;
