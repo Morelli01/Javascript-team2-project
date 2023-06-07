@@ -168,7 +168,11 @@
 }
 
 .film-month_image {
-  width: 805px;
+  /*width: 805px;*/
+  min-width: 805px;
+  display: flex;
+  flex-wrap: nowrap;
+
 }
 
 .film-month_img {
@@ -254,7 +258,7 @@
 }
 
 .film-month_button {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .film-month_button-add {
@@ -499,7 +503,7 @@
 
   .film-month_image {
     flex-direction: column;
-    width: 100%;
+    min-width: 280px;
     margin-bottom: 24px;
 
   }
