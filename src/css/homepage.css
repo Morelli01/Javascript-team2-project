@@ -1,0 +1,595 @@
+:root {
+  --font-family-primary: "Roboto", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --color-primary: #111111;
+  --color-secondary: #F87719;
+  --color-tertiary: #B7B7B7;
+  --font-size-title: 28px;
+  --font-size-subtitle: 20px;
+  --font-size-description: 16px;
+  --font-size-rating: 15px;
+}
+
+.loaded {
+  background-color: #111111;
+}
+
+/* styles for weekly trends */
+
+.weekly_trends {
+  padding: 80px 32px 60px;
+}
+
+.flex-wrap {
+  width: 100%;
+}
+
+.flex-wrap-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekly_trends_title {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-title);
+  line-height: 1.18;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.link_to_catalog {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-secondary);
+}
+
+.link_to_catalog::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.link_to_catalog:hover::before,
+.link_to_catalog:focus::before {
+  transform: scaleX(1);
+}
+
+.weekly_trends_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 28px;
+}
+
+
+.weekly_trends_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekly_trends_list_item {
+  width: 395px;
+}
+
+.list_item {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0) 63.48%, rgba(0, 0, 0, 0.9) 92.16%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 5px;
+}
+
+.list_item:hover,
+.list_item:focus {
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 10px 20px 10px,
+  rgba(0, 0, 0, 0.3) 0 10px 7px -2px;
+  transform: scale(1.03) translateZ(10px);
+  border-radius: 5px;
+}
+
+.weekly-trends_description {
+  position: absolute;
+  display: flex;
+  align-content: stretch;
+  align-items: flex-end;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  bottom: 0;
+  background: rgba(0, 0, 0, .20);
+}
+
+.separator {
+  margin: 0 5px;
+  color: var(--color-tertiary);
+  line-height: 23px;
+}
+
+.film_title {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-subtitle);
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  /*white-space: nowrap;*/
+}
+
+.film_description {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-subtitle);
+  line-height: 1.15;
+  color: var(--color-tertiary);
+}
+
+.rating {
+  font-size: var(--font-size-rating);
+  background: linear-gradient(141.22deg, #F84119 9.4%, rgba(248, 157, 25, 0.8876) 89.96%, rgba(248, 159, 25, 0.68) 91.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* styles for upcoming this month */
+.film-month_title {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-title);
+  line-height: 1.18;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+}
+
+.film-month {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 100px;
+
+}
+
+.film-month_info {
+  margin-bottom: 20px;
+}
+
+.film-month_image {
+  /*width: 805px;*/
+  min-width: 805px;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+
+.film-month_img {
+  background: linear-gradient(307.47deg, rgba(0, 0, 0, 0.2) 23.85%, rgba(0, 0, 0, 0) 47.27%);
+  border-radius: 5px;
+}
+
+.film-month_content {
+  padding-left: 16px;
+}
+
+.film-month_info-title {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  color: #FFFFFF;
+}
+
+.film-month_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.film-month_info-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.film-month_info-label {
+  display: inline-block;
+  min-width: 160px;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--color-tertiary);
+}
+
+.film-month_info-value {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--color-tertiary);
+  align-items: center;
+}
+
+.value-number {
+  background: #F8F8F8;
+  color: #111111;
+  border-radius: 5px;
+  padding: 1px 8px;
+}
+
+.film-month_info-year {
+  color: var(--color-secondary);
+}
+
+.film-month_about-title {
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--color-tertiary);
+}
+
+.film-month_about-description {
+  width: 390px;
+  height: 160px;
+  overflow-y: auto;
+  font-family: var(--font-family-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  line-height: 1.43;
+  color: #F8F8F8;
+}
+
+.film-month_button {
+  margin-top: 20px;
+}
+
+.button {
+  background: linear-gradient(141.22deg, #FFC226 9.4%, #F84119 91.91%);
+  transition: background 250ms cubic-bezier(.4, 0, .2, 1), transform .1s ease-in, box-shadow .25s ease-in;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  border-radius: 74px;
+}
+
+.button:hover {
+  background: linear-gradient(141.22deg, #F84119 9.4%, #FFC226 91.91%);
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+}
+
+.film-month_button-add {
+  padding: 12px 24px;
+  gap: 10px;
+  min-width: 155px;
+  height: 40px;
+  line-height: 1.14;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+
+}
+
+
+.film-month_wrapper {
+  position: relative;
+}
+
+.film-month_button {
+}
+
+.weekly_trends_list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.weekly_trends_list::-webkit-scrollbar {
+  display: none;
+}
+
+.weekly_trends_list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.weekly_trends_list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .weekly-trends_description {
+    padding: 12px;
+  }
+
+  .weekly_trends_list_item {
+    overflow: hidden;
+    scroll-snap-align: start;
+    margin-right: 16px;
+  }
+
+  .weekly_trends_list_item:last-child {
+    margin-right: 0;
+  }
+
+  .weekly_trends_list_item {
+    width: 224px;
+  }
+
+  .film_title {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .film_description {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .film_rating::before {
+    font-size: 9px;
+  }
+
+  .film-month_image {
+    width: 100%;
+  }
+
+  .film-month_content {
+    padding-left: 0;
+  }
+
+  .film-month_wrapper {
+    flex-direction: column;
+  }
+
+  .film-month_info-splitter {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .film-month_about-description {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .film-month_info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .film-month_info > * {
+    flex-basis: 50%;
+  }
+
+  .film-month_info > :nth-child(1),
+  .film-month_info > :nth-child(3) {
+    order: 1;
+  }
+
+  .film-month_info > :nth-child(2),
+  .film-month_info > :nth-child(4) {
+    order: 2;
+  }
+
+
+  .film-month_button {
+    margin-top: 20px;
+  }
+
+  .film-month_info-title {
+    margin-top: 32px;
+  }
+
+  .film-month_about-description {
+    width: 625px;
+    height: 100px;
+    overflow-y: auto;
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+
+  .weekly_trends_list_item {
+    width: 100%;
+    overflow: hidden;
+    margin-right: 0;
+  }
+
+  .weekly_trends_list_item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .weekly_trends_list_item:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .weekly_trends_list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .weekly_trends_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .weekly_trends_list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .weekly_trends_title {
+    font-size: var(--font-size-description);
+    line-height: 1.19;
+    color: #FFFFFF;
+  }
+
+  .link_to_catalog {
+    font-size: var(--font-size-description);
+  }
+
+  .weekly_trends {
+    padding: 40px 20px 32px;
+  }
+
+  .weekly_trends_wrapper {
+    padding-bottom: 24px;
+  }
+
+
+  .weekly_trends_list {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .film_title,
+  .film_description {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .weekly-trends_description {
+    padding: 12px;
+  }
+
+  .film-month {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+
+  .film-month_title {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+  }
+
+  .film-month_wrapper {
+    flex-direction: column;
+  }
+
+  .film-month_image {
+    flex-direction: column;
+    min-width: 280px;
+    margin-bottom: 24px;
+
+  }
+
+  .film-month_about-description {
+    width: auto;
+    height: auto;
+    color: #F8F8F8;
+  }
+
+  .film-month_img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .film-month_content {
+    padding-left: 0;
+  }
+
+  .film-month_info-title {
+    font-size: 20px;
+    line-height: 1.15;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  .film-month_info-label {
+    color: var(--color-tertiary);
+  }
+
+  .value-number {
+    background: #FFFFFF;
+  }
+
+  .film-month_info-value .value-separator {
+    color: #F8F8F8;
+    background-color: var(--color-primary);
+  }
+
+  .span-value {
+    color: #FFFFFF;
+  }
+
+  .film-month_about-title {
+    color: var(--color-tertiary);
+  }
+
+  .film-month_button {
+    margin-top: 20px;
+  }
+
+  .film-month_button-add {
+    min-width: 140px;
+  }
+
+}
+
+
+:root {
+  --star-size: 16px;
+  --star-color: white;
+  --star-background: rgba(248, 65, 25, 1);
+  --rating: 0;
+}
+
+.film_rating {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  line-height: 1;
+}
+
+.film_rating::before {
+  content: '★★★★★';
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

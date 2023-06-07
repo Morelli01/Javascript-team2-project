@@ -1,0 +1,346 @@
+.blocked-element {
+    pointer-events: none;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+/* ====================================================== */
+.hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+    height: 380px;
+    background: linear-gradient(86.77deg, #111111 1.38%, rgba(17, 17, 17, 0) 10.61%), url(../images/BG/mobile-bg-home-x1-min.jpg);
+    background-position: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-primary)
+}
+
+
+
+.hero-title {
+    padding-top: 40px;
+    max-width: 200px;
+    font-style: normal;
+    font-size: 32px;
+    line-height: calc(38/32);
+    color: var(--text-secondary-color)
+}
+
+
+
+.hero-text {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(16/14);
+    max-width: 180px;
+    color: var(--text-primary-color)
+}
+
+
+.hero-wrapper-btn {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.hero-getstarted-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    padding: 12px 24px;
+
+    color: #111111;
+    background: var(--btn-linear-color);
+    border-radius: 74px;
+    border: none;
+    cursor: pointer;
+    transition: var(--primary-duration-timing)
+}
+
+.hero-getstarted-btn:hover,
+.hero-getstarted-btn:focus {
+    color: #F87719;
+    background: #FFFFFF;
+    border: 1px solid #F87719;
+
+}
+
+.hero-moredetails-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    padding: 12px 24px;
+
+
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 74px;
+    cursor: pointer;
+    transition: var(--primary-duration-timing)
+}
+
+
+
+.hero-moredetails-btn:hover,
+.hero-moredetails-btn:focus {
+    color: #F87719;
+    background: #FFFFFF;
+    border: 1px solid #F87719;
+}
+
+.trailer-modal {
+    position: absolute;
+    max-width: 480px;
+    max-height: 360px;
+    width: 90%;
+    height: 80%;
+    background-color: var(--color-primary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+    border-radius: 16px;
+}
+
+.trailer-text {
+    padding: 39px 33px 0 33px;
+    font-size: 16px;
+    line-height: calc(19/16);
+    color: var(--text-secondary-color)
+}
+
+.trailer-srcset {
+    display: flex;
+    justify-content: center;
+}
+
+.trailer-img {
+    margin-top: 24px;
+
+}
+
+.trailer-svg-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+.trailer-svg-close.inother-position {
+    top: -14px;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+}
+
+
+#trailer-video {
+    position: absolute;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 16px;
+
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        padding-left: 20px;
+        height: 380px;
+        background: linear-gradient(86.77deg, #111111 1.38%, rgba(17, 17, 17, 0) 10.61%), url(../images/BG/mobile-bg-home-x2-min.jpg);
+        background-position: 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-left: 32px;
+        height: 432px;
+        background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/tablet-bg-home-x1-min.jpg);
+        background-position: 170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            padding-left: 32px;
+            height: 432px;
+            background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/tablet-bg-home-x2-min.jpg);
+            background-position: 170px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--color-primary)
+        }
+
+    }
+
+
+    .hero-title {
+        max-width: 350px;
+        padding-top: 122px;
+        font-size: 44px;
+        line-height: calc(52/44);
+    }
+
+    .hero-text {
+        max-width: 350px;
+    }
+
+
+    .hero-wrapper-btn {
+        margin-top: 32px;
+    }
+
+    .hero-getstarted-btn {
+        font-size: 14px;
+        line-height: calc(20/14);
+    }
+
+    .hero-moredetails-btn {
+        font-size: 14px;
+        line-height: calc(20/14);
+    }
+
+
+    .trailer-text {
+        width: 50%;
+        padding: 132px 0 0 44px;
+        font-size: 24px;
+        line-height: calc(28/24)
+    }
+
+
+
+    .trailer-srcset {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .trailer-svg-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 10.5px;
+        height: 10.5px;
+    }
+
+
+}
+
+@media screen and (min-width: 1280px) {
+    .hero {
+
+        height: 720;
+        background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x1-min.jpg);
+        background-position: 170px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--color-primary)
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            height: 720;
+            background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x2-min.jpg);
+            background-position: 170px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: var(--color-primary)
+        }
+
+    }
+
+    .trailer-modal {
+
+        max-width: 800px;
+        max-height: 600px;
+
+    }
+
+    #trailer-video {
+        max-width: 800px;
+        max-height: 600px;
+
+
+    }
+
+    .hero-title {
+        max-width: 470px;
+        padding-top: 230px;
+        font-size: 64px;
+        line-height: calc(75/64);
+    }
+
+    .hero-text {
+        max-width: 470px;
+        font-size: 16px;
+        line-height: calc(19/16)
+    }
+
+    .hero-getstarted-btn {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+
+    .hero-moredetails-btn {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+
+    .trailer-text {
+        position: relative;
+        width: 40%;
+        bottom: 70px;
+
+    }
+
+
+    .trailer-srcset {
+        position: relative;
+    }
+
+    .trailer-svg-close {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+
+    }
+
+
+}
