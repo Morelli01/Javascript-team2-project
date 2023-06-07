@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const errorSection = document.querySelector('.error-section');
   const librarySection = document.querySelector('.library-section');
   const dropdown = document.querySelector('.dropdown');
+  const librarybtn = document.querySelector('.librarybtnh');
+  const libraryvideo = document.querySelector('#trailer-video');
 
   let categories = {};
   const API = new filmAPI();
@@ -27,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(error => {
       console.log(error);
     });
-
   function markupFilm(data) {
     if (data.length > 0) {
       ulEl.innerHTML = generateFilmMarkup(data);
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       librarySection.classList.add('is-hidden');
     }
   }
-
+  libraryvideo.styly.left = '0';
   function categoriesFilms(genreIds) {
     let categoriesFilm = genreIds
       .filter(genre => genre !== undefined)
