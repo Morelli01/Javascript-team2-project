@@ -1,0 +1,2 @@
+("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequired7c6.register("3TVVy",(function(e,i){const l=document.querySelector(".scrollUpBtn");document.addEventListener("scroll",(()=>{window.scrollY>400?l.style.visibility="visible":l.style.visibility="hidden"})),l.addEventListener("click",(()=>{window.scrollTo({top:0,behavior:"smooth"})}))}));
+//# sourceMappingURL=scroll.5b3871b4.js.map

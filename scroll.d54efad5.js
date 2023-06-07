@@ -1,0 +1,2 @@
+("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequired7c6.register("dKhQL",(function(e,i){var o=document.querySelector(".scrollUpBtn");document.addEventListener("scroll",(function(){window.scrollY>400?o.style.visibility="visible":o.style.visibility="hidden"})),o.addEventListener("click",(function(){window.scrollTo({top:0,behavior:"smooth"})}))}));
+//# sourceMappingURL=scroll.d54efad5.js.map
