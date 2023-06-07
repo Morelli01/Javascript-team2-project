@@ -1,0 +1,16 @@
+import('./javascript/api');
+import('./javascript/film-month');
+import('./javascript/dark-light');
+import('./javascript/header-menu');
+import('./javascript/header-theme');
+import('./javascript/hero');
+import('./javascript/modal-window');
+import('./javascript/more-details');
+import('./javascript/pagination');
+import('./javascript/scroll');
+import('./javascript/stars');
+import('./javascript/trailer');
+import('./javascript/spin');
+import('./javascript/scroll');
+import('./javascript/footer');
+import('./javascript/favorite');
