@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 .container {
-  min-width: 320px;
+  max-width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -74,7 +74,8 @@
 .search_film_wrap {
   position: absolute;
   bottom: 20px;
-  left: 12px;
+  left: 9px;
+  width: 90%;
 }
 .wrap {
   position: absolute;
@@ -101,6 +102,11 @@
   right: 25%;
   top: 10px;
 }
+.stars{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -132,9 +138,14 @@
   .btn_reset {
     right: 40%;
   }
-  .to_top{
+  .to_top {
     width: 45px;
     height: 45px;
+  }
+  .stars {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -162,7 +173,6 @@
     left: 20px;
   }
 }
-
 /* =========== */
 
 .cards__message {

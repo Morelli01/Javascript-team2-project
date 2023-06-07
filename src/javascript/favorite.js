@@ -2,7 +2,9 @@ import { getGenres } from './api';
 
 const KEY_FAVORITE = 'favorite';
 
-const list = document.querySelector('.js_list');
+const list = document.querySelector('.search_film_list');
+const librarySection = document.querySelector('.library-section');
+const errorSectoin = document.querySelector('.error-section');
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
 getGenres()
@@ -79,4 +81,9 @@ function categoriesFilms(genreIds) {
   return categoriesFilm.join(', ');
 }
 
-markupFilm(favorite);
+if (favorite.length > 0) {
+  librarySection.classList.remove('display-hidden');
+  markupFilm(favorite);
+} else {
+  errorSectoin.classList.remove('display-hidden');
+}
