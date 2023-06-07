@@ -1,9 +1,12 @@
 import axios from 'axios';
+import { round } from './utils';
 if (document.readyState !== "loading") { console.log('11') } else { console.log('21') }
 
-setTimeout(function () {
-    initModal();
-}, 300);
+document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("weekly_trends_list_item") || e.target.closest(".weekly_trends_list_item"))
+        initModal();
+});
+
 function initModal() {
 
     const modal = document.getElementById('modal');
@@ -36,13 +39,13 @@ function initModal() {
                 movieDetails.innerHTML = `
             <tr>
               <td>Vote / Votes</td>
-              <td class='value-number'>${voteAverage}</td>
+              <td class='value-number'>${round(voteAverage, 10)}</td>
               <td class='value-separator'>/</td>
               <td class='value-number'>${voteCount}</td>
             </tr>
             <tr>
               <td>Popularity</td>
-              <td>${popularity}</td>
+              <td>${round(popularity, 10)}</td>
             </tr>
             <tr>
               <td>Genre</td>
