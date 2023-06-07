@@ -4,21 +4,17 @@ import { round } from './utils';
 
 (async () => {
   // spinnerStart()
-  if (
-    (window.location.pathname !== '/' && window.location.pathname !== '/index.html')
-    &&
-    (window.location.pathname !== '/Javascript-team2-project/' && window.location.pathname !== '/Javascript-team2-project/index.html')
-  ) return;
+  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+  if (!filmMonthWrapper) return;
   const film = await getRandomFilmOfMonth();
   console.log('filmMonth', film);
 
   const genres = await getGenres();
   // spinnerStop()
 
-  const filmMonthWrapper = document.querySelector('.film-month_wrapper');
+
   if (filmMonthWrapper) {
-    const resultMarkup = createMarkup(film, genres);
-    filmMonthWrapper.innerHTML = resultMarkup;
+    filmMonthWrapper.innerHTML = createMarkup(film, genres);
   }
 })();
 
