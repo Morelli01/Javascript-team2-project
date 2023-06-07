@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       librarySection.classList.add('is-hidden');
     }
   }
-  libraryvideo.styly.left = '0';
+  librarybtn.classList.add('is-hidden');
   function categoriesFilms(genreIds) {
     let categoriesFilm = genreIds
       .filter(genre => genre !== undefined)
