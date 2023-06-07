@@ -30,7 +30,7 @@ const createMarkup = (film, genres) => {
   const month = (releaseDate.getMonth() + 1).toString().padStart(2, '0');
   const year = releaseDate.getFullYear();
 
-  const formattedReleaseDate = `${day} ${month} ${year}`;
+  const formattedReleaseDate = `${day}.${month}.${year}`;
 
   const voteAverage = film.vote_average;
   const voteCount = film.vote_count;
