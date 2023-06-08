@@ -66,7 +66,7 @@
 }
 
 .modal-poster {
-  margin-top: 8px;
+  /* margin-top: 8px; */
   margin-bottom: 22px;
 }
 
@@ -140,6 +140,8 @@
 .modal-form-submit:hover {
   background-color: #ffffff;
   color: #f87719;
+  text-align: center;
+  width: 180px;
 }
 
 @media screen and (min-width: 768px) {
@@ -149,7 +151,7 @@
   }
 
   .modal-close-btn {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   .modal-content {
@@ -176,6 +178,7 @@
 
   .about-text {
     width: 301px;
+    height: 140px;
   }
 }
 
@@ -186,7 +189,7 @@
   }
 
   .modal-close-btn {
-    margin-top: 40px;
+    margin-top: 24px;
   }
 
   .modal-poster {
@@ -206,5 +209,6 @@
 
   .modal-form-submit {
     margin-top: 20px;
+    width: 173px;
   }
 }
