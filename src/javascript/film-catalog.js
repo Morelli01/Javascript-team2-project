@@ -53,10 +53,10 @@ function markupFilm(data) {
         const buttonText = inStorage
           ? 'Remove from my library'
           : 'Add to my library'; //*-------
-        return `<li class="search_film_img_wrap movie-image list_item" data-id='${id}'>
+        return `<li class="search_film_img_wrap movie-image list_item" data-film-id='${id}'>
         <img loading="lazy" src="${url}" alt="${
-            original_name || original_title
-          }" width="395" height="574" class="search_film_img"/>
+          original_name || original_title
+        }" width="395" height="574" class="search_film_img"/>
         <div class="wrap">
           <div class="search_film_wrap">
             <p class="search_film_title">${original_name || original_title}</p>
