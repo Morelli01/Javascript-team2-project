@@ -12,7 +12,7 @@ let currentFilm = null;
   spinnerStart();
   const film = await getRandomFilmOfMonth();
   currentFilm = film;
-  findFilm = await getCategoriesId(film.id);
+  const findFilm = await getCategoriesId(film.id);
 
   const genres = await getGenres();
   // spinnerStop()
