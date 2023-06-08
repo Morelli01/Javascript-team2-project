@@ -1,8 +1,9 @@
+
 .footer {
     font-size: 14px;
-  color: #b7b7b7;
+  color: var(--color-tertiary);
   line-height: 1.8;
-  background-color: #111111;
+  background-color: var(--color-primary);
   height: 100px;
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  display: none;
+ display: none;
   background-color: rgba(46, 47, 66, 0.4);
   transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
@@ -41,9 +42,6 @@
 .popup-team {
   border-radius: 10px;
   background-color: var(--text-secondary-color);
-  /* background-image: url(../images/backgraund2.jpg); */
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .body--modal-open {
@@ -72,12 +70,9 @@
   padding: 20px;
 }
 .card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 150px;
-  text-align: center;
   align-items: center;
+  text-align: center;
+  width: 150px;
 }
 .icon-close {
   fill: var(--color-tertiary);
@@ -88,6 +83,7 @@
 .icon-close:hover,
 .icon-close:focus {
   fill: var(--color-secondary);
+  box-shadow: 1px 1px 2px var(--color-secondary);
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-content {
@@ -109,9 +105,8 @@
   }
 }
 .team-title {
-  bottom: 90px;
   font-size: var(--font-size-subtitle);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   line-height: 1.2;
 }
 
@@ -119,17 +114,20 @@
     font-size: 14;
   margin-top: 5px;
 
-  color: var(--color-secondary);
-  font-size: 14px;
   color: var(--color-tertiary);
   line-height: 1.2;
 }
 
 .team-links {
-  color: greenyellow;
-  margin-top: auto;
+  padding: 10px 20px;
+  vertical-align: bottom;
+  color: var(--color-primary);
 }
+.team-links:hover,
+.team-links:focus{
+  text-shadow: 1px 1px 2px black;
+}
+
 .splide__arrow svg {
   fill: var(--color-secondary);
 }
-

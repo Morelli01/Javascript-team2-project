@@ -3,23 +3,17 @@ import { Grid } from '@splidejs/splide-extension-grid';
 import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
 const teamSplide = new Splide('.splide', {
   type: 'slide',
-  rewind: false,
+  rewind: true,
   height: '350px',
-  width: '1000px',
-  gap: '5px',
+  width: '900px',
   keyboard: 'global',
   arrows: true,
-  pagination: false,
   grid: {
     dimensions: [
       [1, 4],
-      [1, 4],
-      [1, 4],
-      [1, 1],
     ],
-    gap: { row: '1em', col: '1em' },
+    gap: { row: '5px', col: '5px' },
   },
-  mediaQuery: 'max',
   breakpoints: {
     767: {
       direction: 'ttb',
@@ -27,6 +21,7 @@ const teamSplide = new Splide('.splide', {
       perMove: 1,
       height: '650px',
       grid: false,
+      pagination: false,
     },
     1280: {
       height: '300px',
