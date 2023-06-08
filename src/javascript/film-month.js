@@ -1,12 +1,17 @@
 import { getGenres, getRandomFilmOfMonth } from './api';
 import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
+import { MovieLibrary } from './movie-library';
+
+let currentFilm = null;
 
 (async () => {
-  spinnerStart();
   const filmMonthWrapper = document.querySelector('.film-month_wrapper');
   if (!filmMonthWrapper) return;
+
+  spinnerStart();
   const film = await getRandomFilmOfMonth();
+  currentFilm = film;
   console.log('filmMonth', film);
 
   const genres = await getGenres();
@@ -16,10 +21,30 @@ import { round } from './utils';
   if (filmMonthWrapper) {
     filmMonthWrapper.innerHTML = createMarkup(film, genres);
   }
+
+  const addButton = document.querySelector('.film-month_button-add');
+  addButton.addEventListener('click', async (event) => {
+    const movieLibrary = new MovieLibrary()
+    const isInLibrary = movieLibrary.isFilmInLibrary(event.target.dataset.id);
+    const button = document.querySelector('.film-month_button-add');
+    if (isInLibrary) {
+      console.log('removing');
+      movieLibrary.removeFilmFromLibrary(currentFilm);
+    } else {
+      console.log('adding');
+      movieLibrary.addFilmToLibrary(currentFilm);
+    }
+    button.textContent = isInLibrary
+      ? 'Add film to library'
+      : 'Remove film from library';
+  });
+  spinnerStop();
 })();
-spinnerStop();
+
 const createMarkup = (film, genres) => {
-  const baseUrl = window.innerWidth <= 600 ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2' : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
+  const baseUrl = window.innerWidth <= 600
+    ? 'https://image.tmdb.org/t/p/w600_and_h900_bestv2'
+    : 'https://image.tmdb.org/t/p/w1066_and_h600_bestv2';
   const imageSrc = baseUrl + film.poster_path;
   const overview = film.overview;
   const title = film.original_title;
@@ -31,6 +56,9 @@ const createMarkup = (film, genres) => {
   const year = releaseDate.getFullYear();
 
   const formattedReleaseDate = `${day}.${month}.${year}`;
+
+  const movieLibrary = new MovieLibrary()
+  const isInLibrary = movieLibrary.isFilmInLibrary(film.id);
 
   const voteAverage = film.vote_average;
   const voteCount = film.vote_count;
@@ -74,7 +102,9 @@ const createMarkup = (film, genres) => {
           <p class='film-month_about-description'>${overview}</p>
         </div>
         <div class='film-month_button'>
-          <button class='button film-month_button-add'>Add to my library</button>
+          <button class='button film-month_button-add' data-id='${film.id}'>
+          ${isInLibrary ? 'Remove from library' : 'Add to my library'}
+          </button>
         </div>
       </div>
   `;
