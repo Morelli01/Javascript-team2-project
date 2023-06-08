@@ -23,7 +23,7 @@ function markupFilm(favorite) {
         poster_path,
         original_name,
         original_title,
-        genre_ids,
+        genres,
         release_date,
         vote_average,
         first_air_date,
@@ -33,7 +33,7 @@ function markupFilm(favorite) {
           ? `https://image.tmdb.org/t/p/original${poster_path}`
           : 'https://www.tgv.com.my/assets/images/404/movie-poster.jpg';
         const year = yearsFilm(release_date, first_air_date);
-        let genre = categoriesFilms(genre_ids);
+        let genre = categoriesFilms(genres);
         return `<li class="search_film_img_wrap movie-image list_item" data-film-id='${id}'>
         <img loading="lazy" src="${url}" alt="${
           original_name || original_title
@@ -74,14 +74,7 @@ function yearsFilm(release_date, first_air_date) {
 function categoriesFilms(genreIds) {
   let categoriesFilm = [];
   if (typeof genreIds !== 'undefined') {
-    categoriesFilm = genreIds
-      .filter(genre => typeof genre !== 'undefined')
-      .map(genre => {
-        if (!categories[genre]) {
-          return 'Film';
-        }
-        return categories[genre];
-      });
+    categoriesFilm = genreIds.map(genre => genre.name)
   }
   if (categoriesFilm.length > 2) {
     categoriesFilm = categoriesFilm.slice(0, 2);
