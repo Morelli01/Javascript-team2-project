@@ -105,7 +105,7 @@ const createMarkup = (film, genres) => {
         </div>
         <div class='film-month_button'>
           <button class='button film-month_button-add' data-id='${film.id}'>
-          ${isInLibrary ? 'Remove from library' : 'Add to my library'}
+          ${isInLibrary ? 'Remove from my library' : 'Add to my library'}
           </button>
         </div>
       </div>
