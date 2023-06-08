@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { renderStars, getRandomNumber } from './utils';
+import { onClickFilm, favoriteArr } from './local_storage';
 import { async } from '@vimeo/player';
 
 // YUOTUBE_PLAYER====================================
@@ -197,6 +198,7 @@ async function genre_ID() {
 // FUNCTION=====================================================
 
 function renderMoreDeteils(
+  id,
   poster_path,
   title,
   vote_average,
@@ -205,6 +207,8 @@ function renderMoreDeteils(
   vote_count,
   genres
 ) {
+  const inStorage = favoriteArr.some(film => film.id === id);
+  const buttonText = inStorage ? 'Remove from my library' : 'Add to my library';
   return (heroMoreDeteils.innerHTML = `
     <p  class="hero-more-svg">X</p>
   <div class="hero-more-poster"  style="background:url('https://image.tmdb.org/t/p/w300${poster_path}');  
@@ -216,7 +220,7 @@ function renderMoreDeteils(
   </div>
    </div>
 
-   <div class="hero-more-deteils-info">
+   <div class="hero-more-deteils-info js_add_id" data-id="${id}">
   <h2 class="hero-more-title">${title}</h2>
   <div class="hero-more-container">
     <div class="hero-more-wrapper">
@@ -240,7 +244,7 @@ function renderMoreDeteils(
   <p class="hero-more-about">About</p>
 
   <p class="hero-more-descriptions">${overview}</p>
-      <button class="hero-more_deteils-add_btn">Add to my library</button>
+      <button class="hero-more_deteils-add_btn js_add_collection">${buttonText}</button>
 
   </div>
 
@@ -273,6 +277,7 @@ trendingFilms_DAY()
         });
       });
       renderMoreDeteils(
+        id,
         poster_path,
         title,
         vote_average,
@@ -283,11 +288,9 @@ trendingFilms_DAY()
       );
       const heroMoreDeteils_X = document.querySelector('.hero-more-svg');
       heroMoreDeteils_X.addEventListener('click', onCloseDetails);
-      const moreВeteils_addBtn = document.querySelector(
-        '.hero-more_deteils-add_btn'
-      );
+      const moreВeteils_addBtn = document.querySelector('.js_add_collection');
 
-      moreВeteils_addBtn.addEventListener('click', onAddFilm);
+      moreВeteils_addBtn.addEventListener('click', onClickFilm);
     });
 
     trailer(id)
