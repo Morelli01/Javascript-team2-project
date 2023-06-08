@@ -20,9 +20,9 @@ img {
   height: auto;
 }
 
-body {
+/* body {
   background: #111111;
-}
+} */
 
 .link {
   text-decoration: none;
@@ -90,7 +90,7 @@ body {
 }
 
 .error-section {
-  background-color: #111111;
+  background-color: var(--color-primary);
   padding-top: 44px;
   padding-bottom: 42px;
   text-align: center;

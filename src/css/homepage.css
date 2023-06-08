@@ -118,7 +118,7 @@
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-subtitle);
   line-height: 1.15;
-  color: var(--color-tertiary);
+  color: #B7B7B7;
 }
 
 .rating {
