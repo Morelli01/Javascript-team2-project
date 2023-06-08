@@ -290,7 +290,7 @@
 }
 
 .hero-more-descriptions {
-
+    width: 90%;
     height: 159px;
     overflow-y: auto;
     margin-top: 12px;
