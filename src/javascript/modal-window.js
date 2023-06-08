@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { round } from './utils';
-if (document.readyState !== "loading") { console.log('11') } else { console.log('21') }
+// if (document.readyState !== "loading") { console.log('11') } else { console.log('21') }
 
 document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("weekly_trends_list_item") || e.target.closest(".weekly_trends_list_item"))
+    if (e.target.classList.contains("list_item") || e.target.closest(".list_item"))
         initModal();
+    console.log(3, e.target);
 });
 
 function initModal() {
