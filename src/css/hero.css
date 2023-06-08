@@ -17,7 +17,6 @@
     background-position: 90px;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: var(--color-primary) */
     background-color: black;
 }
 
@@ -29,7 +28,6 @@
     font-style: normal;
     font-size: 32px;
     line-height: calc(38/32);
-    /* color: var(--text-secondary-color) */
     color: #FFFFFF;
 }
 
@@ -42,7 +40,6 @@
     font-size: 14px;
     line-height: calc(16/14);
     max-width: 180px;
-    /* color: var(--text-primary-color) */
     color: #FFFFFF;
 }
 
@@ -108,7 +105,6 @@
     max-height: 360px;
     width: 90%;
     height: 80%;
-    /* background-color: var(--color-primary); */
     background-color: #111111;
     top: 50%;
     left: 50%;
@@ -290,8 +286,10 @@
 }
 
 .hero-more-descriptions {
+    width: 90%;
+    height: 159px;
+    overflow-y: auto;
     margin-top: 12px;
-
     font-weight: 400;
     font-size: 12px;
     line-height: 167%;
@@ -331,7 +329,6 @@
         background-position: 90px;
         background-repeat: no-repeat;
         background-size: cover;
-        /* background-color: var(--color-primary) */
         background-color: #111111;
     }
 
@@ -347,7 +344,6 @@
         background-position: 170px;
         background-repeat: no-repeat;
         background-size: cover;
-        /* background-color: var(--color-primary) */
         background-color: #111111;
     }
 
@@ -363,7 +359,6 @@
             background-position: 170px;
             background-repeat: no-repeat;
             background-size: cover;
-            /* background-color: var(--color-primary) */
             background-color: #111111;
         }
 
@@ -431,9 +426,13 @@
         font-size: 12px;
         line-height: 16px;
 
-
     }
 
+    .hero-more-descriptions {
+        width: 301px;
+        height: 140px;
+        overflow-y: auto;
+    }
 
     .hero-title {
         max-width: 350px;
@@ -496,7 +495,6 @@
         background-position: 170px;
         background-repeat: no-repeat;
         background-size: cover;
-        /* background-color: var(--color-primary) */
         background-color: #111111;
     }
 
@@ -552,6 +550,9 @@
     }
 
     .hero-more-descriptions {
+        width: 331px;
+        height: 159px;
+        overflow-y: auto;
         font-size: 14px;
         line-height: 20px;
     }
@@ -566,7 +567,6 @@
             background-position: 170px;
             background-repeat: no-repeat;
             background-size: cover;
-            /* background-color: var(--color-primary) */
             background-color: #111111;
         }
 
@@ -631,4 +631,5 @@
 
 }
 
-/* fff */
+
+

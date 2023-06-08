@@ -26,6 +26,7 @@
 }
 
 body.light {
+    transition: 0.3s;
     background-color: #FFFFFF;
     --color-primary: #FFFFFF;
     --color-secondary: #F87719;
@@ -49,7 +50,7 @@ p {
 }
 
 body {
-    /* transition: 0.3s; */
+    transition: 0.3s;
     background-color: #111111;
 }
 

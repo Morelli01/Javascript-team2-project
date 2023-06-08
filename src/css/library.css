@@ -20,9 +20,6 @@ img {
   height: auto;
 }
 
-body {
-  background: #111111;
-}
 
 .link {
   text-decoration: none;
@@ -92,7 +89,7 @@ body {
 }
 
 .error-section {
-  background-color: #111111;
+  background-color: var(--color-primary);
   padding-top: 44px;
   padding-bottom: 42px;
   text-align: center;
@@ -105,7 +102,6 @@ body {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
-  /* color: #ffffff; */
   color: var(--text-secondary-color);
   margin-bottom: 32px;
 }
@@ -357,7 +353,6 @@ body {
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-    /* color: #ffffff; */
     color: var(--text-secondary-color);
     margin-bottom: 36px;
   }
@@ -481,7 +476,6 @@ body {
     font-size: 32px;
     line-height: 36px;
     text-align: center;
-    /* color: #ffffff; */
     color: var(--text-secondary-color);
     margin-bottom: 40px;
   }
@@ -546,4 +540,3 @@ body {
   display: flex;
 }
 
-/* fff */
