@@ -137,7 +137,7 @@ bottom: 90px;
 
 .team-text {
   margin-top: 5px;
-  font-size: 14;
+  font-size: 14px;
   color: var(--color-tertiary);
   line-height: 1.2;
 }
@@ -145,6 +145,4 @@ bottom: 90px;
 .team-links {
   color: greenyellow;
   margin-top: auto;
-}
-
 }
