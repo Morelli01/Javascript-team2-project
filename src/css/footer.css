@@ -1,4 +1,3 @@
-
 .footer {
   font-size: 14px;
   color: #b7b7b7;
@@ -13,14 +12,17 @@
   justify-content: center;
   text-align: center;
 }
+
 .footer-text-none {
   text-decoration: underline;
 }
+
 .footer-text {
   display: inline-block;
 }
 
 .popup {
+  z-index: -2;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -32,16 +34,19 @@
   transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
 }
+
 .popup.open {
   opacity: 1;
   visibility: visible;
 }
+
 .popup-body {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .popup-team {
   background-color: aliceblue;
   color: white;
@@ -77,6 +82,7 @@
 .splide {
   padding: 20px;
 }
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -85,6 +91,7 @@
   text-align: center;
   align-items: center;
 }
+
 .icon-close {
   fill: #f8f8f8;
 }
@@ -96,11 +103,13 @@
 .icon-close:focus {
   fill: #f87719;
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-content {
     width: 130px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .card-content {
     width: 170px;
@@ -110,11 +119,13 @@
   height: 260px;
 } 
 }
+
 @media screen and (min-width: 768px) {
   .team-content {
     height: 190px;
   }
 }
+
 .team-title {
 
 bottom: 90px;
@@ -134,4 +145,6 @@ bottom: 90px;
 .team-links {
   color: greenyellow;
   margin-top: auto;
+}
+
 }

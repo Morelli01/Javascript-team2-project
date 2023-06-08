@@ -1,6 +1,5 @@
 import { getCategoriesId } from './api';
 
-
 const KEY_FAVORITE = 'favorite';
 
 export const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
@@ -8,8 +7,9 @@ export const favoriteArr = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 export async function onClickFilm(ev) {
   let filmId = null;
   const btn = ev.target.closest('.js_add_collection');
+
   if (btn) {
-    const { id } = btn.closest('li').dataset;
+    const { id } = btn.closest('.more-details').dataset;
     filmId = await findFilm(Number(id));
     if (filmId) {
       const inStorage = favoriteArr.some(({ id }) => id === filmId);

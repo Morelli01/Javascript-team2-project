@@ -39,6 +39,7 @@ teamSplide.mount({ Grid });
 const teamModalLink = document.querySelector('.team-modal-link');
 const modalTeam = document.querySelector('.data-modal-team');
 const modalCloseBtn = document.querySelector('.modal-team-close-btn');
+const zIndexPopup = document.querySelector('.popup');
 
 teamModalLink.addEventListener('click', teamModalShow);
 modalCloseBtn.addEventListener('click', onCloseBtnClick);
@@ -48,21 +49,27 @@ function teamModalShow(e) {
   e.preventDefault();
   modalTeam.classList.toggle('open');
   document.addEventListener('keydown', onEscModalTeam);
+  zIndexPopup.style.zIndex = '5';
 }
 function onEscModalTeam(e) {
   if (e.code === 'Escape') {
     onCloseBtnClick();
     document.removeEventListener('keydown', onEscModalTeam);
+    zIndexPopup.style.zIndex = '-2';
+    document.body.classList.remove('body--modal-open');
   }
 }
 function onCloseBtnClick() {
   modalTeam.classList.toggle('open');
   document.body.classList.toggle('body--modal-open');
+  zIndexPopup.style.zIndex = '-2';
+  document.body.classList.remove('body--modal-open');
 }
 
 function onBackdropClick(e) {
   if (e.target.classList.contains('popup-body')) {
     onCloseBtnClick();
+    zIndexPopup.style.zIndex = '-2';
+    document.body.classList.remove('body--modal-open');
   }
 }
-
