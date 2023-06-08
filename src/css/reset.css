@@ -25,6 +25,19 @@
     --primary-duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* body.light {
+    background-color: #FFFFFF;
+    --color-primary: #111111;
+    --color-secondary: #F87719;
+    --color-tertiary: #595959;
+    --text-primary-color: #F8F8F8;
+    --text-secondary-color: #111111;
+
+
+} */
+
+
+
 h1,
 h2,
 h3,
@@ -36,6 +49,7 @@ p {
 }
 
 body {
+    /* transition: 0.3s; */
     background-color: #111111;
 }
 
