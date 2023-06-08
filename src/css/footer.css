@@ -1,17 +1,19 @@
 .footer {
-    font-size: 14px;
-  color: #b7b7b7;
+  font-size: 14px;
+  color: var(--color-tertiary);
   line-height: 1.8;
-  background-color: #111111;
+  background-color: var(--color-primary);
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 .footer-text-none {
   text-decoration: underline;
 }
+
 .footer-text {
   display: inline-block;
 }
@@ -28,16 +30,19 @@
   transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
 }
+
 .popup.open {
   opacity: 1;
   display: block;
 }
+
 .popup-body {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .popup-team {
   border-radius: 10px;
   background-color: var(--text-secondary-color);
@@ -71,6 +76,7 @@
 .splide {
   padding: 20px;
 }
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -79,35 +85,43 @@
   text-align: center;
   align-items: center;
 }
+
 .icon-close {
   fill: var(--color-tertiary);
 }
+
 .img-team {
   height: 180px;
 }
+
 .icon-close:hover,
 .icon-close:focus {
   fill: var(--color-secondary);
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-content {
     width: 130px;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .card-content {
     width: 170px;
   }
+
   .img-team {
     width: 300px;
     height: 260px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .team-content {
     height: 190px;
   }
 }
+
 .team-title {
   bottom: 90px;
   font-size: var(--font-size-subtitle);
@@ -116,7 +130,7 @@
 }
 
 .team-text {
-    font-size: 14;
+  font-size: 14;
   margin-top: 5px;
 
   color: var(--color-secondary);
@@ -129,7 +143,7 @@
   color: greenyellow;
   margin-top: auto;
 }
+
 .splide__arrow svg {
   fill: var(--color-secondary);
 }
-
