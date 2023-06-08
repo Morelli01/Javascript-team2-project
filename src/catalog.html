@@ -12,12 +12,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
@@ -33,7 +27,6 @@
             <a class="site-cinemania" href="./index.html">Cinemania</a>
           </p>
         </div>
-        <!-- <p class="menu-title" id="btn-menu">MENU</p> -->
         <button class="menu-title" id="btn-menu">MENU</button>
         <div class="fill-color" id="backdrop-color">
           <nav class="menu">
@@ -61,12 +54,18 @@
     </header>
     <include src="./partials/hero.html"></include>
     <include src="./partials/film-catalog.html"></include>
-    <include src="./partials/spin.html"></include>
-    <include src="./partials/scroll.html"></include>
     <footer>
       <include src="./partials/footer.html"></include>
     </footer>
-    <include src="./partials/modal-window.html"></include>
     <script type="module" src="./index-catalog.js"></script>
   </body>
+    <div class="container">
+      <include src="./partials/scroll.html"></include>
+      <div class="container">
+        <include src="./partials/modal-window.html"></include>
+      </div>
+    </div>
+    <div class="container">
+      <include src="./partials/spin.html"></include>
+    </div>
 </html>
