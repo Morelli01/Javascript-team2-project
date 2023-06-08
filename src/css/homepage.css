@@ -138,6 +138,7 @@
   text-transform: uppercase;
   /* color: #FFFFFF; */
   color: var(--text-secondary-color);
+  margin-bottom: 28px;
 }
 
 .film-month {
