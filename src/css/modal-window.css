@@ -1,8 +1,4 @@
 /* fff */
-.no-scroll {
-  overflow: hidden;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -36,7 +32,7 @@
   border-radius: 5px;
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
   z-index: 10000;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .modal-content {
@@ -123,12 +119,12 @@
 .modal-form-submit {
   padding: 10px 20px;
   background-color: #111111;
-  border-color: #f84119;
+  border-color: #ffc226;
   /* border-image: linear-gradient(to right,#ffc226, #f84119); */
 
   border-radius: 74px;
   cursor: pointer;
-  min-width: 140px;
+  width: 140px;
   height: 38px;
   font-family: 'Roboto';
   font-style: normal;
@@ -213,6 +209,6 @@
 
   .modal-form-submit {
     margin-top: 20px;
-    min-width: 145px;
+    width: 173px;
   }
 }
