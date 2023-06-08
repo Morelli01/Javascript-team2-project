@@ -38,10 +38,12 @@ if (screenWidth >= 768) {
 }
 
 // EVENT FUNCTION=====================================
+function onAddFilm() {
+  console.log('СПЕЦИАЛЬНО ДЛЯ ЯРИКА');
+}
 
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
-    console.log(event.key);
     trailerModal.classList.add('ishidden');
     heroTrailerBTN.classList.remove('blocked-element');
 
@@ -88,7 +90,6 @@ function onOpenDetails() {
 }
 
 function onCloseBackdrop(e) {
-  console.log(e.target);
   if (
     e.target.classList.contains('hero-wrapper-btn') ||
     e.target.classList.contains('hero-moredetails-btn')
@@ -282,6 +283,11 @@ trendingFilms_DAY()
       );
       const heroMoreDeteils_X = document.querySelector('.hero-more-svg');
       heroMoreDeteils_X.addEventListener('click', onCloseDetails);
+      const moreВeteils_addBtn = document.querySelector(
+        '.hero-more_deteils-add_btn'
+      );
+
+      moreВeteils_addBtn.addEventListener('click', onAddFilm);
     });
 
     trailer(id)
