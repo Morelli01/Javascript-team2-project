@@ -12,7 +12,7 @@
   justify-content: center;
   text-align: center;
 }
-.footer-link-decoration{
+.footer-text-none {
   text-decoration: underline;
 }
 .footer-text {
@@ -75,7 +75,6 @@
   padding: 20px;
 }
 .card-content {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -115,13 +114,15 @@
 .team-title {
   bottom: 90px;
   font-size: var(--font-size-subtitle);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   line-height: 1.2;
 }
 
 .team-text {
     font-size: 14;
   margin-top: 5px;
+
+  color: var(--color-secondary);
   font-size: 14px;
   color: var(--color-tertiary);
   line-height: 1.2;
@@ -129,8 +130,7 @@
 
 .team-links {
   color: greenyellow;
-
-  bottom: 0px;
+  margin-top: auto;
 }
 .splide__arrow svg {
   fill: var(--color-secondary);
