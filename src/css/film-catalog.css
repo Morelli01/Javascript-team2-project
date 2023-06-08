@@ -11,6 +11,12 @@
   overflow: hidden;
 }
 
+.container {
+  max-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
 
 .search_film_input {
   background: transparent;
@@ -196,7 +202,6 @@
 }
 
 .cards__text {
-  /* color: white; */
   color: var(--text-secondary-color);
   text-align: center;
   align-items: center;
@@ -253,7 +258,6 @@
   width: 40px;
   border-radius: 50%;
   border: 1px solid #b7b7b7;
-  /* color: #b7b7b7; */
   color: var(--color-tertiary);
   background: transparent;
 }
@@ -411,5 +415,3 @@ a {
 .display-hidden {
   display: none;
 }
-
-/* ff */
