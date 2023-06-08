@@ -34,8 +34,8 @@ let currentFilm = null;
       movieLibrary.addFilmToLibrary(findFilm);
     }
     button.textContent = isInLibrary
-      ? 'Add film to library'
-      : 'Remove film from library';
+      ? 'Add to my library'
+      : 'Remove from my library';
   });
   spinnerStop();
 })();
@@ -105,7 +105,7 @@ const createMarkup = (film, genres) => {
         </div>
         <div class='film-month_button'>
           <button class='button film-month_button-add' data-id='${film.id}'>
-          ${isInLibrary ? 'Remove from library' : 'Add to my library'}
+          ${isInLibrary ? 'Remove from my library' : 'Add to my library'}
           </button>
         </div>
       </div>

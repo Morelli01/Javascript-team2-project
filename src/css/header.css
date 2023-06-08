@@ -163,7 +163,7 @@
         background-color: transparent;
         border-color: transparent;
     }
-
+    
     .active {
         color: orange;
     }
@@ -188,6 +188,7 @@
         transition-duration: 500ms;
         transition-timing-function: linear;
         transition-delay: 0;
+        height: 100vh;
     }
 
     .menu__list {
