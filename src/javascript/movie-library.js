@@ -5,16 +5,16 @@ export class MovieLibrary {
   }
 
   loadLibraryFromLocalStorage() {
-    const libraryJSON = localStorage.getItem('myLibrary');
+    const libraryJSON = localStorage.getItem('favorite');
     this.library = libraryJSON ? JSON.parse(libraryJSON) : [];
   }
 
   saveLibraryToLocalStorage() {
-    localStorage.setItem('myLibrary', JSON.stringify(this.library));
+    localStorage.setItem('favorite', JSON.stringify(this.library));
   }
 
   isFilmInLibrary(id) {
-    return this.library.some((libraryFilm) => libraryFilm.id == id);
+    return this.library.some(libraryFilm => libraryFilm.id == id);
   }
 
   addFilmToLibrary(film) {
@@ -23,7 +23,9 @@ export class MovieLibrary {
   }
 
   removeFilmFromLibrary(film) {
-    const index = this.library.findIndex((libraryFilm) => libraryFilm.id === film.id);
+    const index = this.library.findIndex(
+      libraryFilm => libraryFilm.id === film.id
+    );
     if (index !== -1) {
       this.library.splice(index, 1);
       this.saveLibraryToLocalStorage();
