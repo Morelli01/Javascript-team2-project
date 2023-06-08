@@ -10,8 +10,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .container {
-  min-width: 320px;
+  max-width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -24,7 +25,7 @@
   margin-right: 16px;
   width: 219px;
   height: 40px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--text-secondary-color);
   border-radius: 8px;
   font-weight: 500;
   font-size: 14px;
@@ -32,9 +33,11 @@
   color: #b7b7b7;
   outline: none;
 }
+
 .search_film {
   padding-top: 40px;
 }
+
 .search_film_btn {
   cursor: pointer;
   width: 40px;
@@ -52,6 +55,7 @@
   row-gap: 16px;
   padding-bottom: 60px;
 }
+
 .search_film_title {
   text-transform: uppercase;
   font-weight: 500;
@@ -59,23 +63,29 @@
   line-height: 1.67;
   color: #ffffff;
 }
+
 .search_film_genre {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
   color: #b7b7b7;
 }
+
 .search_film_img_wrap {
   position: relative;
 }
+
 .search_film_img {
   border-radius: 5px;
 }
+
 .search_film_wrap {
   position: absolute;
   bottom: 20px;
-  left: 12px;
+  left: 9px;
+  width: 90%;
 }
+
 .wrap {
   position: absolute;
   width: 100%;
@@ -83,15 +93,15 @@
   left: 0px;
   top: 0px;
   border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 63.48%,
-    rgba(0, 0, 0, 0.9) 92.16%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 63.48%,
+      rgba(0, 0, 0, 0.9) 92.16%);
 }
+
 #form {
   position: relative;
 }
+
 .btn_reset {
   background: transparent;
   border: transparent;
@@ -101,63 +111,89 @@
   right: 25%;
   top: 10px;
 }
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
+
   .search_film {
     text-align: center;
   }
+
   .search_film_wrap,
   .search_film_img {
     width: 224px;
   }
+
   .search_film_title,
   .search_film_genre {
     font-size: 12px;
     line-height: 1.5;
   }
+
   .search_film_list {
     column-gap: 16px;
     row-gap: 28px;
   }
+
   .search_film_list {
     padding-top: 36px;
   }
+
   .search_film {
     padding-top: 60px;
   }
+
   .btn_reset {
     right: 40%;
   }
-  .to_top{
+
+  .to_top {
     width: 45px;
     height: 45px;
   }
+
+  .stars {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
+
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1290px;
   }
+
   .search_film_wrap,
   .search_film_img {
     width: 394px;
   }
+
   .search_film_title {
     font-size: 18px;
   }
+
   .search_film_genre {
     font-size: 20px;
     line-height: 1.15;
   }
+
   .search_film_input {
     width: 334px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
   }
+
   .search_film_wrap {
     left: 20px;
   }
@@ -174,7 +210,8 @@
 }
 
 .cards__text {
-  color: white;
+  /* color: white; */
+  color: var(--text-secondary-color);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -296,6 +333,7 @@ a {
     margin-right: 0;
   }
 }
+
 @media (min-width: 768px) {
   .tui-page-btn.tui-last {
     border: none;
@@ -321,6 +359,7 @@ a {
     margin-right: 0;
   }
 }
+
 @media (min-width: 768px) {
   .tui-page-btn.tui-next {
     fill: #b7b7b7;
@@ -385,3 +424,5 @@ a {
 .display-hidden {
   display: none;
 }
+
+/* ff */

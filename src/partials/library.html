@@ -1,111 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Dream Cinema</title>
-    <link rel="stylesheet" href="/src/css/library.css" />
-  </head>
+<section class="hero hero-library">
+  <div class="container">
+    <h1 class="hero-title library-hit">Create Your Dream Cinema</h1>
 
-  <body>
-    <section class="hero hero-library">
-      <div class="container">
-        <h1 class="hero-title library-hit">Create Your Dream Cinema</h1>
+    <div class="rating-box library-box" style="padding: 12px 0"></div>
 
-        <div class="rating-box library-box" style="padding: 12px 0"></div>
+    <p class="hero-text library-hit">
+      Is a guide to designing a personalized movie theater experience with the
+      right equipment, customized decor, and favorite films. This guide helps
+      you bring the cinema experience into your own home with cozy seating, dim
+      lighting, and movie theater snacks.
+    </p>
 
-        <p class="hero-text library-hit">
-          Is a guide to designing a personalized movie theater experience with
-          the right equipment, customized decor, and favorite films. This guide
-          helps you bring the cinema experience into your own home with cozy
-          seating, dim lighting, and movie theater snacks.
-        </p>
+    <div class="hero-wrapper-btn">
+      <a class="hero-getstarted-btn librarybtnh" href="./catalog.html"
+        >Get Started</a
+      >
+      <button class="hero-moredetails-btn ishidden" type="button">
+        More details
+      </button>
+    </div>
 
-        <div class="hero-wrapper-btn">
-          <a class="hero-getstarted-btn librarybtnh" href="./catalog.html"
-            >Get Started</a
-          >
-          <button class="hero-moredetails-btn ishidden" type="button">
-            More details
-          </button>
-        </div>
+    <div class="trailer-modal ishidden">
+      <div id="trailer-video"></div>
+      <svg class="trailer-svg-close" width="10.5" height="10.5">
+        <use xlink:href="./images/icon.svg#icon-close_X"></use>
+      </svg>
+      <p class="trailer-text">
+        OOPS... <br />
+        We are very sorry!<br />
+        But we couldn’t find the trailer.
+      </p>
+      <picture class="trailer-srcset">
+        <source
+          srcset="
+            ./images/modal-trailer/trailer-modal-desktop-x1.png 1x,
+            images/modal-trailer/trailer-modal-desktop-x2.png   2x
+          "
+          media="(min-width: 1280px )"
+        />
+        <source
+          srcset="
+            ./images/modal-trailer/trailer-modal-tablet-x1.png 1x,
+            images/modal-trailer/trailer-modal-tablet-x2.png   2x
+          "
+          media="(min-width: 768px )"
+        />
+        <source
+          srcset="
+            ./images/modal-trailer/trailer-modal-mobile-x1.png 1x,
+            images/modal-trailer/trailer-modal-mobile-x2.png   2x
+          "
+          media="(min-width: 320px )"
+        />
+        <img
+          class="trailer-img"
+          src="./images/modal-trailer/trailer-modal-mobile-x1.png"
+          alt="image no traler"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
 
-        <div class="trailer-modal ishidden">
-          <div id="trailer-video"></div>
-          <svg class="trailer-svg-close" width="10.5" height="10.5">
-            <use xlink:href="./images/icon.svg#icon-close_X"></use>
-          </svg>
-          <p class="trailer-text">
-            OOPS... <br />
-            We are very sorry!<br />
-            But we couldn’t find the trailer.
-          </p>
-          <picture class="trailer-srcset">
-            <source
-              srcset="
-                ./images/modal-trailer/trailer-modal-desktop-x1.png 1x,
-                images/modal-trailer/trailer-modal-desktop-x2.png   2x
-              "
-              media="(min-width: 1280px )"
-            />
-            <source
-              srcset="
-                ./images/modal-trailer/trailer-modal-tablet-x1.png 1x,
-                images/modal-trailer/trailer-modal-tablet-x2.png   2x
-              "
-              media="(min-width: 768px )"
-            />
-            <source
-              srcset="
-                ./images/modal-trailer/trailer-modal-mobile-x1.png 1x,
-                images/modal-trailer/trailer-modal-mobile-x2.png   2x
-              "
-              media="(min-width: 320px )"
-            />
-            <img
-              class="trailer-img"
-              src="./images/modal-trailer/trailer-modal-mobile-x1.png"
-              alt="image no traler"
-            />
-          </picture>
-        </div>
-      </div>
-    </section>
+<section class="library-section display-hidden">
+  <div class="container">
+    <ul class="search_film_list list"></ul>
+  </div>
+</section>
 
-    <section class="error-section">
-      <div class="container">
-        <h2 class="error-message">
-          OOPS...<br />
-          We are very sorry!<br />
-          You don’t have any movies at your library.
-        </h2>
-        <button class="search-button" href="./catalog.html">
-          Search Movie
-        </button>
-      </div>
-    </section>
-
-    <section class="library-section is-hidden">
-      <div class="container">
-        <div class="dropdown">
-          <button class="dropdown-button">Genre</button>
-          <div class="dropdown-content">
-            <ul class="genre-list">
-              <li data-genre="All">All</li>
-              <li data-genre="Romance">Romance</li>
-              <li data-genre="Detective">Detective</li>
-              <li data-genre="Thriller">Thriller</li>
-              <li data-genre="Action">Action</li>
-              <li data-genre="Documentary">Documentary</li>
-              <li data-genre="Horror">Horror</li>
-            </ul>
-          </div>
-          <ul class="search_film_list list"></ul>
-        </div>
-      </div>
-    </section>
-    <script src="/src/javascript/mylibraryapi.js" type="module"></script>
-    <script src="/src/javascript/librarymain.js" type="module"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
-  </body>
-</html>
+<section class="error-section display-hidden">
+  <div class="container">
+    <h2 class="error-message">
+      OOPS...<br />
+      We are very sorry!<br />
+      You don’t have any movies at your library.
+    </h2>
+    <button class="search-button" href="./catalog.html">Search Movie</button>
+  </div>
+</section>

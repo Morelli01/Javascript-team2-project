@@ -2,7 +2,9 @@ import { getGenres } from './api';
 
 const KEY_FAVORITE = 'favorite';
 
-const list = document.querySelector('.js_list');
+const list = document.querySelector('.search_film_list');
+const librarySection = document.querySelector('.library-section');
+const errorSectoin = document.querySelector('.error-section');
 const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
 
 getGenres()
@@ -31,7 +33,7 @@ function markupFilm(favorite) {
           : 'https://www.tgv.com.my/assets/images/404/movie-poster.jpg';
         const year = yearsFilm(release_date, first_air_date);
         let genre = categoriesFilms(genre_ids);
-        return `<li class="search_film_img_wrap" data-id='${id}'>
+        return `<li class="search_film_img_wrap" data-film-id='${id}'>
 <img src="${url}" alt="${original_name || original_title}"
   width="395" height="574" class="search_film_img"/>
 <div class="wrap">
@@ -79,4 +81,9 @@ function categoriesFilms(genreIds) {
   return categoriesFilm.join(', ');
 }
 
-markupFilm(favorite);
+if (favorite.length > 0) {
+  librarySection.classList.remove('display-hidden');
+  markupFilm(favorite);
+} else {
+  errorSectoin.classList.remove('display-hidden');
+}

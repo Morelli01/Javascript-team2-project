@@ -3,10 +3,10 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-spinnerStart()
   const weeklyTrends = document.querySelector('.weekly_trends_list');
   if (!weeklyTrends) return;
 
+  spinnerStart();
   const films = await getFilms(1);
 
   const topThree = films.results.slice(0, 3);
@@ -22,11 +22,11 @@ spinnerStart()
       resultMarkup += await createItemMarkup(film, genres);
     }
   }
-  // spinnerStop()
   weeklyTrends.innerHTML = resultMarkup;
 
+  spinnerStop();
 })();
-spinnerStop();
+
 const createItemMarkup = async (film, genres) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
   const imageSrc = baseUrl + film.backdrop_path;

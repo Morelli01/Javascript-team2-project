@@ -19,45 +19,43 @@
     />
   </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="container header__container">
-            <div class="logo-group">
-                <a href="#" class="logo">
-                    <svg class="icon-logo" width="32" height="32">
-                        <use href="/src/images/icon.svg#icon-logo"></use>
-                    </svg>
-                   </a>
-                   <p class="site-name">
-                    <a class="site-cinemania" href="./index.html">Cinemania</a>
-                   </p>
-            </div>
-            <p class="menu-title" id="btn-menu">MENU</p>
-            <div class="fill-color" id="backdrop-color">
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu-item">
-                            <a class="menu-link" href="./index.html">
-                                HOME
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link active" href="./catalog.html">
-                                CATALOG
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-link" href="./my-library.html">
-                                MY LIBRARY
-                            </a>
-                        </li>
-                    </ul>
-                   </nav>
-            </div>
-            <button class="btn-color" type="button" id="themetoggle">
-               <img src="../src/images/themecolor/sun.png" class="button-icon" id="toggle-theme-image"/>
-            </button>
+      <div class="container header__container">
+        <div class="logo-group">
+          <a href="./index.html" class="logo">
+            <svg class="icon-logo" width="32" height="32">
+              <use href="/src/images/icon.svg#icon-logo"></use>
+            </svg>
+          </a>
+          <p class="site-name">
+            <a class="site-cinemania" href="./index.html">Cinemania</a>
+          </p>
         </div>
+        <!-- <p class="menu-title" id="btn-menu">MENU</p> -->
+        <button class="menu-title" id="btn-menu">MENU</button>
+        <div class="fill-color" id="backdrop-color">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu-item" id="page">
+                <a class="menu-link" href="./index.html"> HOME </a>
+              </li>
+              <li class="menu-item" id="page">
+                <a class="menu-link active" href="./catalog.html"> CATALOG </a>
+              </li>
+              <li class="menu-item" id="page">
+                <a class="menu-link" href="./my-library.html"> MY LIBRARY </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button class="btn-color" type="button" id="toggle-theme-btn">
+          <img
+            src="../src/images/themecolor/sun.png"
+            class="button-icon"
+            id="toggle-theme-image"
+          />
+      </div>
     </header>
     <include src="./partials/hero.html"></include>
     <include src="./partials/film-catalog.html"></include>
