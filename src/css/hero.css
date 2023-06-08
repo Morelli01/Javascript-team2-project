@@ -166,6 +166,161 @@
 
 }
 
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    overflow: scroll;
+}
+
+.hero-more-deteils {
+    position: absolute;
+    margin-top: 60px;
+
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    max-width: 320px;
+    background-color: #111111;
+    z-index: 3;
+    padding: 52px 16px;
+    box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
+    border-radius: 16px;
+
+}
+
+
+.hero-more-poster {
+
+    height: 420px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.hero-more-svg {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.hero-more-svg:hover {
+    color: #F87719;
+}
+
+.hero-more-title {
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+.hero-more-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between
+}
+
+.hero-more-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-more-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hero-more-specification {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #B7B7B7;
+}
+
+
+.hero-more-stats {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #FFFFFF;
+}
+
+.hero-more-accent {
+    padding: 1px 4px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    color: #000;
+    font-size: 12px;
+    line-height: 14px;
+
+}
+
+.hero-more-slash {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #B7B7B7;
+    margin: 0 4px 0 7px;
+}
+
+.hero-more-about {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #B7B7B7;
+}
+
+.hero-more-descriptions {
+    margin-top: 12px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    color: #F8F8F8;
+}
+
+
+.hero-more_deteils-add_btn {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    background-color: #000;
+    padding: 12px 24px;
+    border-radius: 74px;
+    border: 1px solid #F87719;
+
+}
+
+.hero-more_deteils-add_btn:hover {
+    border: none;
+    color: #F87719;
+    background-color: #FFFFFF;
+}
+
+
+
+
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
@@ -211,6 +366,71 @@
             /* background-color: var(--color-primary) */
             background-color: #111111;
         }
+
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        overflow: scroll;
+    }
+
+    .hero-more-deteils {
+        display: flex;
+        justify-content: center;
+        max-width: 704px;
+        padding: 0;
+    }
+
+    .hero-more-poster {
+        margin-top: 44px;
+        margin-left: 44px;
+        margin-bottom: 44px;
+        width: 294px;
+        height: 400px;
+    }
+
+    .hero-more-deteils-info {
+        width: 50%;
+        margin-top: 44px;
+        margin-left: 16px;
+        margin-right: 50px;
+    }
+
+    .hero-more-svg {
+        top: 30px;
+        right: 30px;
+    }
+
+
+    .hero-more-title {
+        margin: 0;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+
+    .hero-more-accent {
+        font-size: 12px;
+        line-height: 14px;
+
+    }
+
+    .hero-more-slash {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .hero-more_deteils-add_btn {
+        margin-top: 24px;
+        font-size: 12px;
+        line-height: 16px;
+
 
     }
 
@@ -279,6 +499,63 @@
         /* background-color: var(--color-primary) */
         background-color: #111111;
     }
+
+
+    .hero-more-deteils {
+        max-width: 846px;
+
+    }
+
+    .hero-more-poster {
+        margin-top: 60px;
+        margin-left: 60px;
+        margin-bottom: 60px;
+        width: 375px;
+        height: 487px;
+
+    }
+
+    .hero-more-deteils-info {
+        width: 50%;
+        margin-top: 60px;
+        margin-left: 20px;
+        margin-right: 60px;
+    }
+
+    .hero-more-svg {
+        top: 46px;
+        right: 46px;
+    }
+
+
+    .hero-more-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .hero-more-specification {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+
+    .hero-more-stats {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+
+    .hero-more-accent {
+        font-size: 14px;
+        line-height: 16px;
+
+    }
+
+    .hero-more-descriptions {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

@@ -62,13 +62,14 @@ const createMarkup = (film, genres) => {
   const voteAverage = film.vote_average;
   const voteCount = film.vote_count;
   const popularity = film.popularity;
+  const alt = film.title;
   const filmGenres = genres
     .filter(genre => film.genre_ids.slice(0, 2).includes(genre.id))
     .map(({ name }) => name)
     .join(', ');
   return `
       <div class='film-month_image'>
-        <img class='film-month_img' src='${imageSrc}' alt=''>
+        <img class='film-month_img' src='${imageSrc}' alt='${alt}'>
       </div>
       <div class='film-month_content'>
         <div>
