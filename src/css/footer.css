@@ -123,6 +123,8 @@
   margin-top: 5px;
 
   color: var(--color-secondary);
+  font-size: 14px;
+  color: var(--color-tertiary);
   line-height: 1.2;
 }
 
@@ -133,3 +135,4 @@
 .splide__arrow svg {
   fill: var(--color-secondary);
 }
+
