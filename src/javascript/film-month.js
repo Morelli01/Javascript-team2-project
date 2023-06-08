@@ -34,8 +34,8 @@ let currentFilm = null;
       movieLibrary.addFilmToLibrary(findFilm);
     }
     button.textContent = isInLibrary
-      ? 'Add film to library'
-      : 'Remove film from library';
+      ? 'Add to my library'
+      : 'Remove from my library';
   });
   spinnerStop();
 })();
