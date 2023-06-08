@@ -3,10 +3,10 @@ import { spinnerStart, spinnerStop } from './spin';
 import { round } from './utils';
 
 (async () => {
-spinnerStart()
   const weeklyTrends = document.querySelector('.weekly_trends_list');
   if (!weeklyTrends) return;
 
+  spinnerStart();
   const films = await getFilms(1);
 
   const topThree = films.results.slice(0, 3);
@@ -22,17 +22,18 @@ spinnerStart()
       resultMarkup += await createItemMarkup(film, genres);
     }
   }
-  // spinnerStop()
   weeklyTrends.innerHTML = resultMarkup;
 
+  spinnerStop();
 })();
-spinnerStop();
+
 const createItemMarkup = async (film, genres) => {
   const baseUrl = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
   const imageSrc = baseUrl + film.backdrop_path;
   const title = film.original_title;
   const releaseYear = film.release_date.split('-')[0];
   const voteAverage = film.vote_average;
+  const alt = film.title;
 
   const filmGenres = genres
     .filter((genre) => film.genre_ids.slice(0, 2).includes(genre.id))
@@ -40,7 +41,7 @@ const createItemMarkup = async (film, genres) => {
     .join(', ');
 
   return `<li class='weekly_trends_list_item list_item' data-film-id='${film.id}'>
-        <img class='movie-image' src='${imageSrc}' alt=''>
+        <img class='movie-image' src='${imageSrc}' alt='${alt}'>
         <div class='weekly-trends_description'>
           <div class='flex-wrap'>
             <h4 class='film_title'>${title}</h4>

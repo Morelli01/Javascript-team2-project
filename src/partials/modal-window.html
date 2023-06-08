@@ -3,9 +3,9 @@
 <div class="container">
   <div id="modal">
     <div class="modal-overlay"></div>
-    <div class="modal more-details data-film-id=" ${film.id}>
+    <div class="modal more-details js_add_id">
       <button type="button" class="modal-close-btn" data-modal-close>
-        <svg class="modal-close-icon" width="24" height="24">
+        <svg class="modal-close-icon" width="10" height="10">
           <use href="/src/images/icon.svg#icon-close_X"></use>
         </svg>
       </button>
@@ -36,7 +36,11 @@
           </div>
           <h2 class="about">ABOUT</h2>
           <p class="about-text"></p>
-          <button type="submit" class="modal-form-submit" id="data-film-id">
+          <button
+            type="submit"
+            class="modal-form-submit js_add_collection"
+            id="data-film-id"
+          >
             Add to my library
           </button>
         </div>

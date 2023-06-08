@@ -131,6 +131,7 @@
   line-height: 1.18;
   text-transform: uppercase;
   color: var(--text-secondary-color);
+  margin-bottom: 28px;
 }
 
 .film-month {

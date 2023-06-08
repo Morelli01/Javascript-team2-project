@@ -50,9 +50,11 @@ img {
 }
 
 .hero-library {
-  background: linear-gradient(79.49deg,
+  background: linear-gradient(
+      79.49deg,
       #111111 34.1%,
-      rgba(17, 17, 17, 0) 64.67%),
+      rgba(17, 17, 17, 0) 64.67%
+    ),
     url('/src/images/BG/mobile-bg-my_library\ -x1-min.jpg');
   background-size: cover;
   color: white;
@@ -101,6 +103,7 @@ img {
   line-height: 28px;
   text-align: center;
   color: var(--text-secondary-color);
+  margin-bottom: 32px;
 }
 
 .search-button {
@@ -113,7 +116,8 @@ img {
   border: none;
   border-radius: 74px;
   padding: 12px 24px;
-  margin-top: 20px;
+  height: 38px;
+
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -173,9 +177,11 @@ img {
   left: 0px;
   top: 0px;
   border-radius: 5px;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) 63.48%,
-      rgba(0, 0, 0, 0.9) 92.16%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 63.48%,
+    rgba(0, 0, 0, 0.9) 92.16%
+  );
 }
 
 .dropdown {
@@ -300,9 +306,11 @@ img {
   }
 
   .hero-library {
-    background: linear-gradient(77.77deg,
+    background: linear-gradient(
+        77.77deg,
         #111111 33.58%,
-        rgba(17, 17, 17, 0) 71.57%),
+        rgba(17, 17, 17, 0) 71.57%
+      ),
       url(/src/images/BG/tablet-bg-my_library\ -x1-min.jpg);
     padding-bottom: 118px;
     background-size: cover;
@@ -346,10 +354,10 @@ img {
     line-height: 32px;
     text-align: center;
     color: var(--text-secondary-color);
+    margin-bottom: 36px;
   }
 
   .search-button {
-    margin-top: 24px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -420,9 +428,11 @@ img {
   }
 
   .hero-library {
-    background: linear-gradient(80.53deg,
+    background: linear-gradient(
+        80.53deg,
         #111111 31.92%,
-        rgba(17, 17, 17, 0) 72.35%),
+        rgba(17, 17, 17, 0) 72.35%
+      ),
       url(/src/images/BG/desctop-bg-my_library\ -x1-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -467,10 +477,10 @@ img {
     line-height: 36px;
     text-align: center;
     color: var(--text-secondary-color);
+    margin-bottom: 40px;
   }
 
   .search-button {
-    margin-top: 28px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -528,4 +538,5 @@ img {
 
 .rating-box.library-box {
   display: flex;
+}
 }
