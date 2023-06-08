@@ -14,9 +14,6 @@
   text-align: center;
 }
 
-.footer-link-decoration {
-
-
 .footer-text-none {
   text-decoration: underline;
 }
@@ -152,3 +149,4 @@
   fill: var(--color-secondary);
 
 }
+                                                    
