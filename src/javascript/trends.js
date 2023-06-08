@@ -33,6 +33,7 @@ const createItemMarkup = async (film, genres) => {
   const title = film.original_title;
   const releaseYear = film.release_date.split('-')[0];
   const voteAverage = film.vote_average;
+  const alt = film.title;
 
   const filmGenres = genres
     .filter((genre) => film.genre_ids.slice(0, 2).includes(genre.id))
@@ -40,7 +41,7 @@ const createItemMarkup = async (film, genres) => {
     .join(', ');
 
   return `<li class='weekly_trends_list_item list_item' data-film-id='${film.id}'>
-        <img class='movie-image' src='${imageSrc}' alt=''>
+        <img class='movie-image' src='${imageSrc}' alt='${alt}'>
         <div class='weekly-trends_description'>
           <div class='flex-wrap'>
             <h4 class='film_title'>${title}</h4>
