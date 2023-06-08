@@ -17,7 +17,8 @@
     background-position: 90px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: var(--color-primary)
+    /* background-color: var(--color-primary) */
+    background-color: black;
 }
 
 
@@ -28,7 +29,8 @@
     font-style: normal;
     font-size: 32px;
     line-height: calc(38/32);
-    color: var(--text-secondary-color)
+    /* color: var(--text-secondary-color) */
+    color: #FFFFFF;
 }
 
 
@@ -40,7 +42,8 @@
     font-size: 14px;
     line-height: calc(16/14);
     max-width: 180px;
-    color: var(--text-primary-color)
+    /* color: var(--text-primary-color) */
+    color: #FFFFFF;
 }
 
 
@@ -105,7 +108,8 @@
     max-height: 360px;
     width: 90%;
     height: 80%;
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
+    background-color: #111111;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -117,7 +121,7 @@
     padding: 39px 33px 0 33px;
     font-size: 16px;
     line-height: calc(19/16);
-    color: var(--text-secondary-color)
+    color: var(--text-secondary-color);
 }
 
 .trailer-srcset {
@@ -172,7 +176,8 @@
         background-position: 90px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: var(--color-primary)
+        /* background-color: var(--color-primary) */
+        background-color: #111111;
     }
 
 }
@@ -187,7 +192,8 @@
         background-position: 170px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: var(--color-primary)
+        /* background-color: var(--color-primary) */
+        background-color: #111111;
     }
 
 
@@ -202,7 +208,8 @@
             background-position: 170px;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: var(--color-primary)
+            /* background-color: var(--color-primary) */
+            background-color: #111111;
         }
 
     }
@@ -269,7 +276,8 @@
         background-position: 170px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: var(--color-primary)
+        /* background-color: var(--color-primary) */
+        background-color: #111111;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -281,7 +289,8 @@
             background-position: 170px;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: var(--color-primary)
+            /* background-color: var(--color-primary) */
+            background-color: #111111;
         }
 
     }

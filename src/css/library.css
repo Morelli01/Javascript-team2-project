@@ -4,6 +4,7 @@ h2,
 h3 {
   margin: 0;
 }
+
 * {
   margin: 0;
 }
@@ -18,9 +19,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 body {
   background: #111111;
 }
+
 .link {
   text-decoration: none;
 }
@@ -28,6 +31,7 @@ body {
 .list {
   list-style: none;
 }
+
 .is-hidden {
   position: absolute;
   width: 1px;
@@ -40,18 +44,18 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .container {
   min-width: 320px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .hero-library {
-  background: linear-gradient(
-      79.49deg,
+  background: linear-gradient(79.49deg,
       #111111 34.1%,
-      rgba(17, 17, 17, 0) 64.67%
-    ),
+      rgba(17, 17, 17, 0) 64.67%),
     url('/src/images/BG/mobile-bg-my_library\ -x1-min.jpg');
   background-size: cover;
   color: white;
@@ -71,6 +75,7 @@ body {
   text-align: left;
   margin-bottom: 8px;
 }
+
 .hero-description-library {
   font-family: 'Roboto';
   font-style: normal;
@@ -83,6 +88,7 @@ body {
   max-width: 249px;
   text-align: left;
 }
+
 .error-section {
   background-color: #111111;
   padding-top: 44px;
@@ -97,7 +103,8 @@ body {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: var(--text-secondary-color);
 }
 
 .search-button {
@@ -114,44 +121,55 @@ body {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .search-button:hover {
-  color: #ffa500; /* Изменяем цвет текста на оранжевый */
-  background: transparent; /* Делаем фон прозрачным */
+  color: #ffa500;
+  /* Изменяем цвет текста на оранжевый */
+  background: transparent;
+  /* Делаем фон прозрачным */
   border: 1px solid #ffa500;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .library-section {
   padding-top: 60px;
   background-color: #111111;
 }
+
 .search_film_list {
   padding-top: 16px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 16px;
 }
+
 .search_film_title {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.67;
   color: #ffffff;
 }
+
 .search_film_genre {
   font-weight: 500;
   line-height: 1.67;
   color: #b7b7b7;
 }
+
 .search_film_img_wrap {
   position: relative;
 }
+
 .search_film_img {
   border-radius: 5px;
 }
+
 .search_film_wrap {
   position: absolute;
   bottom: 20px;
   left: 12px;
 }
+
 .wrap {
   position: absolute;
   width: 100%;
@@ -159,16 +177,16 @@ body {
   left: 0px;
   top: 0px;
   border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 63.48%,
-    rgba(0, 0, 0, 0.9) 92.16%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 63.48%,
+      rgba(0, 0, 0, 0.9) 92.16%);
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-button {
   width: 172px;
   height: 44px;
@@ -229,61 +247,72 @@ body {
   padding: 14px 92px 10px 20px;
   cursor: pointer;
 }
+
 .hero-title.library-hit {
   padding: 0px;
   text-align: left;
   max-width: 235px;
 }
+
 .hero-text.library-hit {
   padding: 0px;
   text-align: left;
   max-width: 250px;
 }
+
 .genre-list li:hover {
   color: #ffffff;
   background-color: #333333;
 }
+
 .hero-title.library-hit {
   padding-top: 40px;
 }
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
+
   .search_film {
     text-align: center;
   }
+
   .search_film_wrap,
   .search_film_img {
     width: 224px;
   }
+
   .search_film_title,
   .search_film_genre {
     line-height: 1.5;
   }
+
   .search_film_list {
     column-gap: 16px;
     row-gap: 28px;
   }
+
   .search_film_list {
     padding-top: 36px;
   }
+
   .search_film {
     padding-top: 60px;
   }
+
   .hero-library {
-    background: linear-gradient(
-        77.77deg,
+    background: linear-gradient(77.77deg,
         #111111 33.58%,
-        rgba(17, 17, 17, 0) 71.57%
-      ),
+        rgba(17, 17, 17, 0) 71.57%),
       url(/src/images/BG/tablet-bg-my_library\ -x1-min.jpg);
     padding-bottom: 118px;
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .hero-text-library {
     font-family: 'Roboto';
     font-style: normal;
@@ -295,6 +324,7 @@ body {
     color: #ffffff;
     max-width: 332px;
   }
+
   .hero-description-library {
     font-family: 'Roboto';
     font-style: normal;
@@ -306,10 +336,12 @@ body {
     color: #f8f8f8;
     max-width: 357px;
   }
+
   .error-section {
     padding-top: 80px;
     padding-bottom: 60px;
   }
+
   .error-message {
     font-family: 'Roboto';
     font-style: normal;
@@ -317,8 +349,10 @@ body {
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--text-secondary-color);
   }
+
   .search-button {
     margin-top: 24px;
     font-style: normal;
@@ -329,64 +363,77 @@ body {
     text-align: center;
     color: #111111;
   }
+
   .dropdown-button {
     width: 144px;
   }
+
   .genre-list {
     width: 144px;
   }
+
   .dropdown-content {
     width: 144px;
   }
+
   .library-section {
     padding-top: 80px;
   }
+
   .hero-title.library-hit {
     padding: 0px;
     text-align: left;
     max-width: 332px;
   }
+
   .hero-text.library-hit {
     padding: 0px;
     text-align: left;
     max-width: 360px;
   }
+
   .hero-title.library-hit {
     padding-top: 62px;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1290px;
   }
+
   .search_film_wrap,
   .search_film_img {
     width: 394px;
   }
+
   .search_film_title {
     font-size: 18px;
   }
+
   .search_film_genre {
     font-size: 20px;
     line-height: 1.15;
   }
+
   .search_film_input {
     width: 334px;
   }
+
   .search_film_wrap {
     left: 20px;
   }
+
   .hero-library {
-    background: linear-gradient(
-        80.53deg,
+    background: linear-gradient(80.53deg,
         #111111 31.92%,
-        rgba(17, 17, 17, 0) 72.35%
-      ),
+        rgba(17, 17, 17, 0) 72.35%),
       url(/src/images/BG/desctop-bg-my_library\ -x1-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 341px;
   }
+
   .hero-text-library {
     font-family: 'Roboto';
     font-style: normal;
@@ -399,6 +446,7 @@ body {
     max-width: 464px;
     margin-bottom: 16px;
   }
+
   .hero-description-library {
     font-family: 'Roboto';
     font-style: normal;
@@ -410,10 +458,12 @@ body {
     max-width: 464px;
     color: #f8f8f8;
   }
+
   .error-section {
     padding-top: 160px;
     padding-bottom: 188px;
   }
+
   .error-message {
     font-family: 'Roboto';
     font-style: normal;
@@ -421,8 +471,10 @@ body {
     font-size: 32px;
     line-height: 36px;
     text-align: center;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: var(--text-secondary-color);
   }
+
   .search-button {
     margin-top: 28px;
     font-family: 'Roboto';
@@ -433,32 +485,40 @@ body {
     align-items: center;
     text-align: center;
   }
+
   .dropdown-button {
     width: 260px;
   }
+
   .genre-list {
     width: 260px;
   }
+
   .dropdown-content {
     width: 260px;
   }
+
   .library-section {
     padding-top: 110px;
   }
+
   .hero-title.library-hit {
     padding: 0px;
     text-align: left;
     max-width: 464px;
   }
+
   .hero-text.library-hit {
     padding: 0px;
     text-align: left;
     max-width: 464px;
   }
+
   .hero-title.library-hit {
     padding-top: 169px;
   }
 }
+
 .library-btn-h {
   position: absolute;
   width: 1px;
@@ -471,6 +531,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .rating-box.library-box {
   display: flex;
 }
