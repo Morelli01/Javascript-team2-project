@@ -16,7 +16,6 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  /* outline: 2px solid tomato; */
 }
 
 .search_film_input {
@@ -210,7 +209,6 @@
 }
 
 .cards__text {
-  /* color: white; */
   color: var(--text-secondary-color);
   text-align: center;
   align-items: center;
@@ -267,7 +265,6 @@
   width: 40px;
   border-radius: 50%;
   border: 1px solid #b7b7b7;
-  /* color: #b7b7b7; */
   color: var(--color-tertiary);
   background: transparent;
 }
@@ -425,5 +422,3 @@ a {
 .display-hidden {
   display: none;
 }
-
-/* ff */
