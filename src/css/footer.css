@@ -46,7 +46,8 @@
   background-color: aliceblue;
   color: white;
   border-radius: 10px;
-  background-image: url(../images/backgraund2.jpg);
+  background-color: #111111;
+  /* background-image: url(../images/backgraund2.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -87,7 +88,10 @@
 .icon-close {
   fill: #f8f8f8;
 }
+  .img-team{
 
+  height: 180px;
+} 
 .icon-close:hover,
 .icon-close:focus {
   fill: #f87719;
@@ -101,6 +105,10 @@
   .card-content {
     width: 170px;
   }
+  .img-team{
+    width: 300px;
+  height: 260px;
+} 
 }
 @media screen and (min-width: 768px) {
   .team-content {
@@ -108,19 +116,22 @@
   }
 }
 .team-title {
-  font-size: 20;
-  color: #f87719;
+
+bottom: 90px;
+  font-size: var(--font-size-subtitle);
+  color:var(--color-tertiary);
   line-height: 1.2;
-  margin-bottom: 5px;
+
 }
 
 .team-text {
+  margin-top: 5px;
   font-size: 14;
-  color: #f87719;
+  color: var(--color-tertiary);
   line-height: 1.2;
-  gap: 15px;
 }
 
 .team-links {
   color: greenyellow;
+  margin-top: auto;
 }

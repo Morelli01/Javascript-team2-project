@@ -1,13 +1,11 @@
 import Splide from '@splidejs/splide';
 import { Grid } from '@splidejs/splide-extension-grid';
-
 import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
-
 const teamSplide = new Splide('.splide', {
   type: 'slide',
   rewind: false,
-  height: '290px',
-  width: '900px',
+  height: '350px',
+  width: '1000px',
   gap: '5px',
   keyboard: 'global',
   arrows: true,
