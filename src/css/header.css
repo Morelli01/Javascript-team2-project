@@ -28,7 +28,8 @@
 .site-name {
     align-items: center;
     font-size: 24px;
-    color: white;
+    /* color: white; */
+    color: var(--text-secondary-color);
     cursor: pointer;
 }
 
@@ -215,3 +216,5 @@
         margin-bottom: 24px;
     }
 }
+
+/* ff */

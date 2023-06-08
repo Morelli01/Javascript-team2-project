@@ -1,8 +1,5 @@
 // export const toggleThemeBtn = document.querySelector('body') 
-
-// ===========-------==========
-
-// const toggleThemeBtn = document.querySelector('themetoggle') 
+ 
 
 // const toggleThemeImage = document.getElementById('toggle-theme-image')
 // toggleThemeBtn.addEventListener('click', () => {
