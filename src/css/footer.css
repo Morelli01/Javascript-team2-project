@@ -5,7 +5,7 @@
   background-color: #111111;
 }
 
-.footer .container {
+.footer  {
   height: 100px;
   display: flex;
   align-items: center;
@@ -26,14 +26,14 @@
   top: 0;
   left: 0;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   background-color: rgba(46, 47, 66, 0.4);
   transition-property: visibility, opacity, transform;
   transition-duration: 250ms;
 }
 .popup.open {
   opacity: 1;
-  visibility: visible;
+  display: block;
 }
 .popup-body {
   position: absolute;
