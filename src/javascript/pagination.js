@@ -1,5 +1,4 @@
 import Pagination from 'tui-pagination';
-
 export function createPagination(totalItems, visiblePages) {
   const options = {
     totalItems,
