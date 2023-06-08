@@ -290,8 +290,10 @@
 }
 
 .hero-more-descriptions {
+    width: 90%;
+    height: 159px;
+    overflow-y: auto;
     margin-top: 12px;
-
     font-weight: 400;
     font-size: 12px;
     line-height: 167%;
@@ -431,9 +433,13 @@
         font-size: 12px;
         line-height: 16px;
 
-
     }
 
+    .hero-more-descriptions {
+        width: 301px;
+        height: 140px;
+        overflow-y: auto;
+    }
 
     .hero-title {
         max-width: 350px;
@@ -552,6 +558,9 @@
     }
 
     .hero-more-descriptions {
+        width: 331px;
+        height: 159px;
+        overflow-y: auto;
         font-size: 14px;
         line-height: 20px;
     }
@@ -630,5 +639,7 @@
 
 
 }
+
+
 
 /* fff */

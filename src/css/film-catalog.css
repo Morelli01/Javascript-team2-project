@@ -11,13 +11,6 @@
   overflow: hidden;
 }
 
-.container {
-  min-width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-  /* outline: 2px solid tomato; */
-}
 
 .search_film_input {
   background: transparent;
@@ -45,30 +38,30 @@
   border: transparent;
   text-align: center;
   border-radius: 50%;
-  background: linear-gradient(141.22deg, #ffc226 9.4%, #f84119 91.91%);
+  background: var(--btn-linear-color);
 }
 
 .search_film_list {
   padding-top: 16px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   row-gap: 16px;
   padding-bottom: 60px;
 }
 
 .search_film_title {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 12px;
   line-height: 1.67;
-  color: #ffffff;
+  color: var( --text-secondary-color);
 }
 
 .search_film_genre {
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 12px;
   line-height: 1.67;
-  color: #b7b7b7;
+  color: var(--color-tertiary);
 }
 
 .search_film_img_wrap {
@@ -100,6 +93,7 @@
 
 #form {
   position: relative;
+  text-align: center;
 }
 
 .btn_reset {
@@ -118,12 +112,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
   .search_film {
     text-align: center;
   }
@@ -140,6 +128,8 @@
   }
 
   .search_film_list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
     column-gap: 16px;
     row-gap: 28px;
   }
@@ -169,10 +159,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1290px;
-  }
-
   .search_film_wrap,
   .search_film_img {
     width: 394px;
@@ -267,7 +253,8 @@
   width: 40px;
   border-radius: 50%;
   border: 1px solid #b7b7b7;
-  color: #b7b7b7;
+  /* color: #b7b7b7; */
+  color: var(--color-tertiary);
   background: transparent;
 }
 

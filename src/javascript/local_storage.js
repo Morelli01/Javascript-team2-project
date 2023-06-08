@@ -9,7 +9,7 @@ export async function onClickFilm(ev) {
   const btn = ev.target.closest('.js_add_collection');
 
   if (btn) {
-    const { id } = btn.closest('.more-details').dataset;
+    const { id } = btn.closest('.js_add_id').dataset;
     filmId = await findFilm(Number(id));
     if (filmId) {
       const inStorage = favoriteArr.some(({ id }) => id === filmId);
