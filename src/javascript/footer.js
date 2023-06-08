@@ -61,7 +61,7 @@ function onCloseBtnClick() {
 }
 
 function onBackdropClick(e) {
-  if (e.target.classList.contains('popup-body')) {
+  if (e.target.classList.contains('popup')) {
     onCloseBtnClick();
   }
 }
