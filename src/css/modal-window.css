@@ -98,12 +98,14 @@
   margin-bottom: 12px;
   margin-top: 15px;
   color: var(--color-tertiary);
+  /* color: var(--text-secondary-color) */
 }
 
 .about-text {
   font-style: normal;
   font-weight: 400;
   color: var(--text-primary-color);
+  /* color: var(--text-secondary-color); */
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -113,7 +115,9 @@
 .modal-form-submit {
   padding: 10px 20px;
   background-color: #111111;
-  border-color: #f84119;
+    border-color: #f84119;
+  /* border-image: linear-gradient(to right,#ffc226, #f84119); */
+
   border-radius: 74px;
   cursor: pointer;
   min-width: 140px;
