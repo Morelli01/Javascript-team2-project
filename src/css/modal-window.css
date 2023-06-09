@@ -32,7 +32,7 @@
   width: 320px;
   max-height: 100%;
   /* background-color: var(--primary-color); */
-  background-color: #111111;
+  background-color: var(--color-primary);
   border-radius: 5px;
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
   z-index: 10000;
@@ -58,7 +58,7 @@
   align-items: center;
   width: 24px;
   height: 24px;
-  background-color: #111111;
+  background-color: var(--color-primary)
 }
 
 .modal-close-icon {
@@ -75,7 +75,7 @@
 }
 
 .modal-title-movie {
-  color: #ffffff;
+  color: var(--text-secondary-color);
   font-size: 24px;
   margin-bottom: 29px;
 }
@@ -103,7 +103,7 @@
   font-size: 14px;
   margin-bottom: 12px;
   margin-top: 15px;
-  color: #b7b7b7;
+  color: var(--color-tertiary);
   /* color: var(--text-secondary-color) */
 }
 
@@ -112,7 +112,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
-  color: #f8f8f8;
+  color: var(--text-primary-color);
   /* color: var(--text-secondary-color); */
   font-size: 14px;
   line-height: 1.5;
