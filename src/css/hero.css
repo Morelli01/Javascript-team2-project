@@ -184,7 +184,7 @@
     transform: translate(-50%);
     width: 90%;
     min-width: 320px;
-    background-color: #111111;
+    background-color: var(--color-primary);
     z-index: 3;
     padding: 52px 16px;
     box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
@@ -208,7 +208,7 @@
     top: 20px;
     right: 20px;
     position: absolute;
-    color: #FFFFFF;
+    color: var(--text-secondary-color);
     cursor: pointer;
 }
 
@@ -221,7 +221,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
-    color: #FFFFFF;
+    color: var(--text-secondary-color);
 }
 
 .hero-more-container {
@@ -247,7 +247,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: #B7B7B7;
+    color: var(--color-tertiary);
 }
 
 
@@ -255,7 +255,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
-    color: #FFFFFF;
+    color: var(--text-secondary-color);
 }
 
 .hero-more-accent {
@@ -282,7 +282,7 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
-    color: #B7B7B7;
+    color: var(--color-tertiary);
 }
 
 .hero-more-descriptions {
@@ -293,7 +293,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 167%;
-    color: #F8F8F8;
+    color: var(--text-primary-color);
 }
 
 
@@ -630,6 +630,3 @@
 
 
 }
-
-
-

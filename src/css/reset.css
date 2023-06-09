@@ -31,7 +31,7 @@ body.light {
     --color-primary: #FFFFFF;
     --color-secondary: #F87719;
     --color-tertiary: #595959;
-    --text-primary-color: #F8F8F8;
+    --text-primary-color: #111111;
     --text-secondary-color: #111111;
 
 
@@ -120,6 +120,7 @@ section {
 .ishidden {
     display: none;
 }
+
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
