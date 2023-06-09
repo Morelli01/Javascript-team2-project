@@ -116,7 +116,7 @@
 
 .modal-form-submit {
   padding: 10px 20px;
-  background-color: #111111;
+  background-color: var(--color-primary);
   border-color: #f84119;
   /* border-image: linear-gradient(to right,#ffc226, #f84119); */
 
@@ -130,13 +130,13 @@
   font-size: 12px;
   line-height: 14px;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-secondary-color);
   margin-bottom: 52px;
   margin-top: 12px;
 }
 
 .modal-form-submit:hover {
-  background-color: #ffffff;
+  background-color: var(--text-secondary-color);
   color: #f87719;
   text-align: center;
   border-color: var(--color-primary);

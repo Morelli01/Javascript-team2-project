@@ -302,8 +302,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: #FFFFFF;
-    background-color: #000;
+    color: var(--text-secondary-color);
+    background-color: var(--color-primary);
     padding: 12px 24px;
     border-radius: 74px;
     border: 1px solid #F87719;
