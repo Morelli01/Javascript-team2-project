@@ -490,7 +490,7 @@
 @media screen and (min-width: 1280px) {
     .hero {
 
-        height: 720;
+        height: 720px;
         background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x1-min.jpg);
         background-position: 170px;
         background-repeat: no-repeat;
@@ -562,7 +562,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero {
-            height: 720;
+            height: 720px;
             background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x2-min.jpg);
             background-position: 170px;
             background-repeat: no-repeat;

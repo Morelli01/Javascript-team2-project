@@ -2,8 +2,6 @@
 .footer {
     font-size: 14px;
 
-  font-size: 14px;
-
   color: var(--color-tertiary);
   line-height: 1.8;
   background-color: var(--color-primary);
@@ -128,7 +126,7 @@
 }
 
 .team-text {
-  font-size: 14;
+  font-size: 14px;
   margin-top: 5px;
 
   color: var(--color-tertiary);

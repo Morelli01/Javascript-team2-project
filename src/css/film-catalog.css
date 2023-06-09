@@ -111,7 +111,7 @@
   position: absolute;
   cursor: pointer;
   right: 30%;
-  top: 10;
+  top: 10px;
 }
 
 .stars {
@@ -302,9 +302,6 @@ a {
     background-image: url('../images/catalog-pagination/left-arrow.png');
     background-repeat: no-repeat;
     background-position: 50%;
-
-    border: none;
-    margin-right: 0;
   }
 }
 

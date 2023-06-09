@@ -43,8 +43,8 @@
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .menu-item {
@@ -95,7 +95,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    site-name {
+    .site-name{
         margin-left: 307px;
     }
 
@@ -129,7 +129,7 @@
 
     .menu-item:not(:last-child) {
         margin-right: 15px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     .menu-title {
@@ -172,7 +172,6 @@
         left: -204px;
         top: 0;
         width: 204px;
-        height: 438px;
         background-color: var(--color-primary);
         padding-top: 80px;
         padding-left: 20px;
