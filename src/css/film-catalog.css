@@ -89,8 +89,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   border-radius: 5px;
   background: linear-gradient(180deg,
       rgba(0, 0, 0, 0) 63.48%,
@@ -98,8 +98,10 @@
 }
 
 #form {
-  position: relative;
+  width: 320px;
   text-align: center;
+  position: relative;
+  margin: 0 auto;
 }
 
 .btn_reset {
@@ -108,8 +110,8 @@
   color: #b7b7b7;
   position: absolute;
   cursor: pointer;
-  right: 25%;
-  top: 10px;
+  right: 30%;
+  top: 10;
 }
 
 .stars {
@@ -149,7 +151,7 @@
   }
 
   .btn_reset {
-    right: 40%;
+    right: 35%;
   }
 
   .to_top {
@@ -161,6 +163,9 @@
     width: 90%;
     display: flex;
     flex-direction: row-reverse;
+  }
+  #form{
+    width: 400px;
   }
 }
 
