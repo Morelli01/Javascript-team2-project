@@ -3,6 +3,7 @@ import { renderStars, getRandomNumber } from './utils';
 import { onClickFilm, favoriteArr } from './local_storage';
 import { async } from '@vimeo/player';
 
+// test
 // YUOTUBE_PLAYER====================================
 let player;
 
