@@ -181,7 +181,7 @@
         padding-bottom: 50px;
         transition-duration: 500ms;
         transition-timing-function: linear;
-        transition-delay: 0;
+        
         height: 100vh;
     }
 
