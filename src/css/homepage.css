@@ -523,7 +523,7 @@
   }
 
   .span-value {
-    color: #FFFFFF;
+    color: var(--text-secondary-color);
   }
 
   .film-month_about-title {
