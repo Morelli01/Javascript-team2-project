@@ -8,5 +8,4 @@ import('./javascript/modal-window');
 import('./javascript/pagination');
 import('./javascript/scroll');
 import('./javascript/spin');
-import('./javascript/favorite');
 import('./javascript/footer');
