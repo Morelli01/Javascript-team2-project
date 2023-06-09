@@ -196,7 +196,7 @@
   font-weight: var(--font-weight-medium);
   font-size: 16px;
   line-height: 1.19;
-  color: var(--color-tertiary);
+  color: var(--text-secondary-color);
   align-items: center;
 }
 
@@ -231,7 +231,7 @@
   font-weight: var(--font-weight-regular);
   font-size: 14px;
   line-height: 1.43;
-  color: var(--color-tertiary);
+  color: var(--text-secondary-color);
 }
 
 .film-month_button {
@@ -262,7 +262,7 @@
   min-width: 155px;
   height: 40px;
   line-height: 1.14;
-  color: var(--color-primary);
+  color: #111111;
   font-weight: var(--font-weight-medium);
 
 }
