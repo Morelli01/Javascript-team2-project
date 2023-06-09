@@ -302,8 +302,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
-    color: var(--text-secondary-color);
-    background-color: var(--color-primary);
+    color: #FFFFFF;
+    background-color: #000;
     padding: 12px 24px;
     border-radius: 74px;
     border: 1px solid #F87719;
@@ -490,7 +490,7 @@
 @media screen and (min-width: 1280px) {
     .hero {
 
-        height: 720px;
+        height: 720;
         background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x1-min.jpg);
         background-position: 170px;
         background-repeat: no-repeat;
@@ -562,7 +562,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero {
-            height: 720px;
+            height: 720;
             background: linear-gradient(86.77deg, #111111 10.38%, rgba(17, 17, 17, 0) 30.61%), url(../images/BG/desctop-bg-home-x2-min.jpg);
             background-position: 170px;
             background-repeat: no-repeat;
