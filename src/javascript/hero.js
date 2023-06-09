@@ -39,9 +39,6 @@ if (screenWidth >= 768) {
 }
 
 // EVENT FUNCTION=====================================
-function onAddFilm() {
-  console.log('СПЕЦИАЛЬНО ДЛЯ ЯРИКА');
-}
 
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
@@ -236,7 +233,7 @@ function renderMoreDeteils(
           vote_count
         )}</span>
       </p>
-      <p class="hero-more-stats">${popularity}</p>
+      <p class="hero-more-stats">${popularity.toFixed(1)}</p>
       <p class="hero-more-stats">${genres}</p>
     </div>
   </div>
@@ -306,8 +303,8 @@ trendingFilms_DAY()
       });
 
     heroSection.style = `
-    max-width: 1280px;
-    margin: 0 auto;
+    // max-width: 1280px;
+    // margin: 0 auto;
    background: linear-gradient(86.47deg, #111111 33.63%, rgba(17, 17, 17, 0) 76.86%),url('https://image.tmdb.org/t/p/original${backdrop_path}');
    background-repeat: no-repeat;
    background-position: center;
