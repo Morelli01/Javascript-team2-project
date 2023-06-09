@@ -518,7 +518,7 @@
   }
 
   .film-month_info-value .value-separator {
-    color: #F8F8F8;
+    color: var(--text-primary-color);
     background-color: var(--color-primary);
   }
 
