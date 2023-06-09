@@ -4,31 +4,28 @@ import { onClickFilm, favoriteArr } from './local_storage';
 
 const addBtnLib = document.querySelector('.js_add_collection');
 
+const modal = document.getElementById('modal');
+const movieTitle = document.querySelector('.modal-title-movie');
+const movieDetails = document.querySelector('.movie-details table tbody');
+const movieOverview = document.querySelector('.about-text');
+const moviePoster = document.querySelector('.modal-poster');
+const movieDiv = document.querySelector('.more-details');
+
 
 document.addEventListener('click', function (e) {
   if (
     e.target.classList.contains('list_item') ||
     e.target.closest('.list_item')
   ) {
-    initModal();
+    const listItem = e.target.classList.contains('list_item')
+      ? e.target
+      : e.target.closest('.list_item');
+    initModal(listItem);
   }
 });
 
-function initModal() {
-  const movieImages = document.querySelectorAll('[data-film-id]');
-  movieImages.forEach((image) => {
-    image.addEventListener('click', () => {
-      const movieId = image.dataset.filmId;
-      openModal(movieId);
-    });
-  });
-
-  const modal = document.getElementById('modal');
-  const movieTitle = document.querySelector('.modal-title-movie');
-  const movieDetails = document.querySelector('.movie-details table tbody');
-  const movieOverview = document.querySelector('.about-text');
-  const moviePoster = document.querySelector('.modal-poster');
-  const movieDiv = document.querySelector('.more-details');
+function initModal(listItem) {
+  const movieId = listItem.dataset.filmId;
 
   const openModal = (movieId) => {
     const apiKey = '97fe01addf81f73693338979426ece1e';
@@ -114,6 +111,9 @@ function initModal() {
       closeModal();
     }
   };
+  listItem.addEventListener('click', () => {
+    openModal(movieId);
+  });
 }
 
 addBtnLib.addEventListener('click', onClickFilm);
