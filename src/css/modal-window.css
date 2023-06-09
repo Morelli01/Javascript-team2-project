@@ -117,7 +117,7 @@
 .modal-form-submit {
   padding: 10px 20px;
   background-color: var(--color-primary);
-  border-color: #f84119;
+  border-color: var(--color-secondary);
   /* border-image: linear-gradient(to right,#ffc226, #f84119); */
 
   border-radius: 74px;
