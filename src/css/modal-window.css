@@ -139,7 +139,7 @@
   background-color: #ffffff;
   color: #f87719;
   text-align: center;
-  width: 180px;
+  border-color: var(--color-primary);
 }
 
 @media screen and (min-width: 768px) {
