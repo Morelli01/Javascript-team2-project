@@ -133,7 +133,7 @@ img {
 
 .library-section {
   padding-top: 60px;
-  background-color: #111111;
+  background-color: var(--color-primary);
 }
 
 .search_film_list {
@@ -177,11 +177,9 @@ img {
   left: 0px;
   top: 0px;
   border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 63.48%,
-    rgba(0, 0, 0, 0.9) 92.16%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 63.48%,
+      rgba(0, 0, 0, 0.9) 92.16%);
 }
 
 .dropdown {
@@ -306,11 +304,9 @@ img {
   }
 
   .hero-library {
-    background: linear-gradient(
-        77.77deg,
+    background: linear-gradient(77.77deg,
         #111111 33.58%,
-        rgba(17, 17, 17, 0) 71.57%
-      ),
+        rgba(17, 17, 17, 0) 71.57%),
       url(/src/images/BG/tablet-bg-my_library\ -x1-min.jpg);
     padding-bottom: 118px;
     background-size: cover;
@@ -428,11 +424,9 @@ img {
   }
 
   .hero-library {
-    background: linear-gradient(
-        80.53deg,
+    background: linear-gradient(80.53deg,
         #111111 31.92%,
-        rgba(17, 17, 17, 0) 72.35%
-      ),
+        rgba(17, 17, 17, 0) 72.35%),
       url(/src/images/BG/desctop-bg-my_library\ -x1-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -539,4 +533,3 @@ img {
 .rating-box.library-box {
   display: flex;
 }
-
