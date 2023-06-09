@@ -17,7 +17,7 @@
     background-position: 90px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: black;
+    background-color: rgb(251, 242, 242);
 }
 
 
@@ -313,7 +313,7 @@
 .hero-more_deteils-add_btn:hover {
     border: none;
     color: #F87719;
-    background-color: #FFFFFF;
+    background-color: var(--text-secondary-color);
 }
 
 

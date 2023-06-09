@@ -1,12 +1,16 @@
 import { getGenres } from './api';
 import { round } from './utils';
+import { MovieLibrary } from './movie-library';
 
 const KEY_FAVORITE = 'favorite';
 
 const list = document.querySelector('.search_film_list');
 const librarySection = document.querySelector('.library-section');
 const errorSectoin = document.querySelector('.error-section');
-const favorite = JSON.parse(localStorage.getItem(KEY_FAVORITE)) ?? [];
+
+const movieLibrary = new MovieLibrary();
+movieLibrary.loadLibraryFromLocalStorage();
+const favorite = movieLibrary.library;
 
 getGenres()
   .then(res => {
@@ -16,7 +20,7 @@ getGenres()
   })
   .catch(Error);
 
-function markupFilm(favorite) {
+export function markupFilm(favorite) {
   const markup = favorite
     .map(
       ({
@@ -74,7 +78,7 @@ function yearsFilm(release_date, first_air_date) {
 function categoriesFilms(genreIds) {
   let categoriesFilm = [];
   if (typeof genreIds !== 'undefined') {
-    categoriesFilm = genreIds.map(genre => genre.name)
+    categoriesFilm = genreIds.map(genre => genre.name);
   }
   if (categoriesFilm.length > 2) {
     categoriesFilm = categoriesFilm.slice(0, 2);
@@ -85,9 +89,11 @@ function categoriesFilms(genreIds) {
   return categoriesFilm.join(', ');
 }
 
-if (favorite.length > 0) {
-  librarySection.classList.remove('display-hidden');
-  markupFilm(favorite);
-} else {
-  errorSectoin.classList.remove('display-hidden');
+if (window.location.href.includes('my-library.html')) {
+  if (favorite.length > 0) {
+    librarySection.classList.remove('display-hidden');
+    markupFilm(favorite);
+  } else {
+    errorSectoin.classList.remove('display-hidden');
+  }
 }

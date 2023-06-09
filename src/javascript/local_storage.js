@@ -1,4 +1,5 @@
 import { getCategoriesId } from './api';
+import { markupFilm } from './favorite';
 
 const KEY_FAVORITE = 'favorite';
 
@@ -20,6 +21,11 @@ export async function onClickFilm(ev) {
         );
         localStorage.setItem(KEY_FAVORITE, JSON.stringify(favoriteArr));
         btn.textContent = 'Add to my library';
+        if (window.location.href.includes('my-library.html')) {
+          colseModalLib();
+          markupFilm(favoriteArr);
+          chekMyLibraryFilms();
+        }
       } else {
         const film = await getCategoriesId(filmId);
         favoriteArr.push(film);
@@ -33,4 +39,19 @@ export async function onClickFilm(ev) {
 async function findFilm(ev) {
   const res = await getCategoriesId(ev);
   return res.id === ev ? res.id : null;
+}
+
+function colseModalLib() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+  document.body.classList.remove('noScroll');
+}
+
+function chekMyLibraryFilms() {
+  if (favoriteArr.length === 0) {
+    const errorSectoin = document.querySelector('.error-section');
+    const librarySection = document.querySelector('.library-section');
+    librarySection.classList.add('display-hidden');
+    errorSectoin.classList.remove('display-hidden');
+  }
 }
