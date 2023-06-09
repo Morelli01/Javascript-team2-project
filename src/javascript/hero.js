@@ -303,8 +303,6 @@ trendingFilms_DAY()
       });
 
     heroSection.style = `
-    // max-width: 1280px;
-    // margin: 0 auto;
    background: linear-gradient(86.47deg, #111111 33.63%, rgba(17, 17, 17, 0) 76.86%),url('https://image.tmdb.org/t/p/original${backdrop_path}');
    background-repeat: no-repeat;
    background-position: center;
