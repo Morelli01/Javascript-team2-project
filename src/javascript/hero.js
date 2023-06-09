@@ -198,6 +198,7 @@ function renderMoreDeteils(
   id,
   poster_path,
   title,
+  name,
   vote_average,
   popularity,
   overview,
@@ -218,7 +219,7 @@ function renderMoreDeteils(
    </div>
 
    <div class="hero-more-deteils-info js_add_id" data-id="${id}">
-  <h2 class="hero-more-title">${title}</h2>
+  <h2 class="hero-more-title">${title || name}</h2>
   <div class="hero-more-container">
     <div class="hero-more-wrapper">
       <p class="hero-more-specification">Vote / Votes</p>
@@ -277,6 +278,7 @@ trendingFilms_DAY()
         id,
         poster_path,
         title,
+        name,
         vote_average,
         popularity,
         overview,
@@ -303,8 +305,6 @@ trendingFilms_DAY()
       });
 
     heroSection.style = `
-    // max-width: 1280px;
-    // margin: 0 auto;
    background: linear-gradient(86.47deg, #111111 33.63%, rgba(17, 17, 17, 0) 76.86%),url('https://image.tmdb.org/t/p/original${backdrop_path}');
    background-repeat: no-repeat;
    background-position: center;
@@ -318,12 +318,12 @@ trendingFilms_DAY()
 
     if (screenWidth >= 768 && screenWidth < 1280) {
       heroRating.style.padding = '17px 0 ';
-      heroTitle.style.paddingTop = '96px';
+      heroTitle.style.paddingTop = '36px';
       heroText.innerHTML = `${overview.slice(0, 200)}...`;
     }
     if (screenWidth >= 1280) {
       heroRating.style.padding = '17px 0 ';
-      heroTitle.style.paddingTop = '178px';
+      heroTitle.style.paddingTop = '118px';
       heroText.innerHTML = `${overview.slice(0, 250)}...`;
     }
 
