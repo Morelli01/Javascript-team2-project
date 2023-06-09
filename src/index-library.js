@@ -8,5 +8,6 @@ import('./javascript/pagination');
 import('./javascript/scroll');
 import('./javascript/spin');
 import('./javascript/scroll');
-import('./javascript/footer');
 import('./javascript/favorite');
+import('./javascript/footer');
+
